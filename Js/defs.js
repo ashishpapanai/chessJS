@@ -35,6 +35,11 @@ let SideChar = "wb-";
 let RankChar = "12345678";
 let FileChar = "abcdefgh";
 
+let KnDir = [ -8, -19,	-21, -12, 8, 19, 21, 12 ];
+let RkDir = [ -1, -10,	1, 10 ];
+let BiDir = [ -9, -11, 11, 9 ];
+let KiDir = [ -1, -10,	1, 10, -9, -11, 11, 9 ];
+
 function FR2SQ(f,r) {
 return ( (21 + (f) ) + ( (r) * 10 ) );
 }
