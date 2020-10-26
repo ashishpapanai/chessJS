@@ -12,10 +12,9 @@ GameBoard.ply = 0;
 GameBoard.enPas = 0;
 GameBoard.castlePerm = 0;
 GameBoard.material = new Array(2);
-GameBoard.pceNum = new Array(13);
+GameBoard.pceNum = new Array(13); 
 GameBoard.pList = new Array(14 * 10);
 GameBoard.posKey = 0;
-
 GameBoard.moveList = new Array(MAXDEPTH * MAXPOSITIONMOVES);
 GameBoard.moveScores = new Array(MAXDEPTH * MAXPOSITIONMOVES);
 GameBoard.moveListStart = new Array(MAXDEPTH);
@@ -54,7 +53,6 @@ function PrintBoard() {
 	console.log("key:" + GameBoard.posKey.toString(16));
 }
 
-
 function GeneratePosKey() {
 
 	let sq = 0;
@@ -82,19 +80,23 @@ function GeneratePosKey() {
 
 }
 
-function PrintPieceLists(){
-    let piece, pceNum;
-    for(piece = PIECES.wP; piece <= PIECES.bK; ++piece){
-        for(pceNum = 0; pceNum < GameBoard.pceNum[piece]; ++pceNum){
-            console.log('Piece '+PceChar[piece]+' on '+PrSq(GameBoard.pList[PCEINDEX(piece, pceNum)]));
-        }
-    }
+function PrintPieceLists() {
+
+	let piece, pceNum;
+	
+	for(piece = PIECES.wP; piece <= PIECES.bK; ++piece) {
+		for(pceNum = 0; pceNum < GameBoard.pceNum[piece]; ++pceNum) {
+			console.log('Piece ' + PceChar[piece] + ' on ' + PrSq( GameBoard.pList[PCEINDEX(piece,pceNum)] ));
+		}
+	}
+
 }
 
-function UpdateListMaterial(){
-    let piece, sq,index, colour;
-
-    for(index = 0; index < 14 * 120; ++index) {
+function UpdateListsMaterial() {	
+	
+	let piece,sq,index,colour;
+	
+	for(index = 0; index < 14 * 120; ++index) {
 		GameBoard.pList[index] = PIECES.EMPTY;
 	}
 	
@@ -105,20 +107,23 @@ function UpdateListMaterial(){
 	for(index = 0; index < 13; ++index) {
 		GameBoard.pceNum[index] = 0;
 	}
-
-    for(index = 0; index < 64; ++index){
-        sq = SQ120(index);
-        piece = GameBoard.pieces[sq];
-        if(piece != PIECES.EMPTY){
-            colour = PieceCol[piece];
-
-            GameBoard.material[colour] += PieceVal[piece];
-
-            GameBoard.pList[PCEINDEX(piece,GameBoard.pceNum[piece])] = sq;
-            GameBoard.pceNum[piece]++;
-        }
-    }
-    PrintPieceLists();
+	
+	for(index = 0; index < 64; ++index) {
+		sq = SQ120(index);
+		piece = GameBoard.pieces[sq];
+		if(piece != PIECES.EMPTY) {
+			
+			colour = PieceCol[piece];		
+			
+			GameBoard.material[colour] += PieceVal[piece];
+			
+			GameBoard.pList[PCEINDEX(piece,GameBoard.pceNum[piece])] = sq;
+			GameBoard.pceNum[piece]++;			
+		}
+	}
+	
+	PrintPieceLists();
+	
 }
 
 function ResetBoard() {
@@ -144,6 +149,7 @@ function ResetBoard() {
 	
 }
 
+//rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 
 function ParseFen(fen) {
 
@@ -155,7 +161,7 @@ function ParseFen(fen) {
     let count = 0;
     let i = 0;  
 	let sq120 = 0;
-	let fenCnt = 0;
+	let fenCnt = 0; // fen[fenCnt]
 	
 	while ((rank >= RANKS.RANK_1) && fenCnt < fen.length) {
 	    count = 1;
@@ -203,9 +209,9 @@ function ParseFen(fen) {
 			file++;
         }
 		fenCnt++;
-    } 
-    
-
+	} // while loop end
+	
+	//rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 	GameBoard.side = (fen[fenCnt] == 'w') ? COLOURS.WHITE : COLOURS.BLACK;
 	fenCnt += 2;
 	
@@ -230,28 +236,32 @@ function ParseFen(fen) {
 		console.log("fen[fenCnt]:" + fen[fenCnt] + " File:" + file + " Rank:" + rank);	
 		GameBoard.enPas = FR2SQ(file,rank);		
     }
-    GameBoard.posKey = GeneratePosKey();
-    UpdateListMaterial();
-    PrintSqAttacked();
-
+	
+	GameBoard.posKey = GeneratePosKey();	
+	UpdateListsMaterial();
+	PrintSqAttacked();
 }
 
 function PrintSqAttacked() {
+	
 	let sq,file,rank,piece;
+
 	console.log("\nAttacked:\n");
+	
 	for(rank = RANKS.RANK_8; rank >= RANKS.RANK_1; rank--) {
 		let line =((rank+1) + "  ");
 		for(file = FILES.FILE_A; file <= FILES.FILE_H; file++) {
 			sq = FR2SQ(file,rank);
-			if(SqAttacked(sq, GameBoard.side) == BOOL.TRUE) piece = "X";
+			if(SqAttacked(sq, GameBoard.side^1) == BOOL.TRUE) piece = "X";
 			else piece = "-";
 			line += (" " + piece + " ");
 		}
 		console.log(line);
 	}
+	
 	console.log("");
+	
 }
-
 
 function SqAttacked(sq, side) {
 	let pce;
