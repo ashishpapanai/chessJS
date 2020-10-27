@@ -13,7 +13,7 @@ function PrMove(move) {
 	MvStr = FileChar[ff] + RankChar[rf] + FileChar[ft] + RankChar[rt];
 	
 	let promoted = PROMOTED(move);
-	console.log('promoted = ' + promoted);
+
 	if(promoted != PIECES.EMPTY) {
 		let pchar = 'q';
 		if(PieceKnight[promoted] == BOOL.TRUE) {
@@ -40,4 +40,57 @@ function PrintMoveList() {
 		console.log('Move:' + num + ':' + PrMove(move));
 		num++;
 	}
+	console.log('End MoveList');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
