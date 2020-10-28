@@ -11,6 +11,21 @@ $('#TakeButton').click( function () {
 	}
 });
 
+
+var UserMove = {};
+UserMove.from = SQUARES.NO_SQ;
+UserMove.to = SQUARES.NO_SQ;
+
+var MirrorFiles = [ FILES.FILE_H, FILES.FILE_G, FILES.FILE_F, FILES.FILE_E, FILES.FILE_D, FILES.FILE_C, FILES.FILE_B, FILES.FILE_A ];
+var MirrorRanks = [ RANKS.RANK_8, RANKS.RANK_7, RANKS.RANK_6, RANKS.RANK_5, RANKS.RANK_4, RANKS.RANK_3, RANKS.RANK_2, RANKS.RANK_1 ];
+
+function MIRROR120(sq) {
+	var file = MirrorFiles[FilesBrd[sq]];
+	var rank = MirrorRanks[RanksBrd[sq]];
+	return FR2SQ(file,rank);
+}
+
+
 $('#NewGameButton').click( function () {
 	NewGame(START_FEN);
 });
@@ -78,6 +93,10 @@ function ClickedSquare(pageX, pageY) {
 	let rank = 7 - Math.floor((pageY-workedY) / 60);
 	
 	let sq = FR2SQ(file,rank);
+
+	if(GameController.BoardFlipped == BOOL.TRUE) {
+		sq = MIRROR120(sq);
+	}
 	
 	console.log('Clicked sq:' + PrSq(sq));
 	
@@ -302,6 +321,12 @@ function PreSearch() {
 $('#SearchButton').click( function () {	
 	GameController.PlayerSide = GameController.side ^ 1;
 	PreSearch();
+});
+
+$("#FlipButton").click(function () {	
+	GameController.BoardFlipped ^= 1;
+	console.log("Flipped:" + GameController.BoardFlipped);
+	SetInitialBoardPieces();
 });
 
 function StartSearch() {

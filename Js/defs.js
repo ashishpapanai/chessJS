@@ -163,11 +163,13 @@ function HASH_CA() { GameBoard.posKey ^= CastleKeys[GameBoard.castlePerm]; }
 function HASH_SIDE() { GameBoard.posKey ^= SideKey; }
 function HASH_EP() { GameBoard.posKey ^= PieceKeys[GameBoard.enPas]; }
 
-let GameController = {};
+var GameController = {};
 GameController.EngineSide = COLOURS.BOTH;
 GameController.PlayerSide = COLOURS.BOTH;
+GameController.BoardFlipped = BOOL.FALSE;
 GameController.GameOver = BOOL.FALSE;
 
-let UserMove = {};
-UserMove.from = SQUARES.NO_SQ;
-UserMove.to = SQUARES.NO_SQ;
+
+// let UserMove = {};
+// UserMove.from = SQUARES.NO_SQ;
+// UserMove.to = SQUARES.NO_SQ;
