@@ -125,6 +125,16 @@ let CastlePerm = [
     15, 15, 15, 15, 15, 15, 15, 15, 15, 15
 ];
 
+/*	
+0000 0000 0000 0000 0000 0111 1111 -> From 0x7F
+0000 0000 0000 0011 1111 1000 0000 -> To >> 7, 0x7F
+0000 0000 0011 1100 0000 0000 0000 -> Captured >> 14, 0xF
+0000 0000 0100 0000 0000 0000 0000 -> EP 0x40000
+0000 0000 1000 0000 0000 0000 0000 -> Pawn Start 0x80000
+0000 1111 0000 0000 0000 0000 0000 -> Promoted Piece >> 20, 0xF
+0001 0000 0000 0000 0000 0000 0000 -> Castle 0x1000000
+*/
+
 
 function FROMSQ(m) { return (m & 0x7F); }
 function TOSQ(m) { return ( (m >> 7) & 0x7F); }
@@ -152,3 +162,12 @@ function HASH_PCE(pce, sq) {
 function HASH_CA() { GameBoard.posKey ^= CastleKeys[GameBoard.castlePerm]; }
 function HASH_SIDE() { GameBoard.posKey ^= SideKey; }
 function HASH_EP() { GameBoard.posKey ^= PieceKeys[GameBoard.enPas]; }
+
+let GameController = {};
+GameController.EngineSide = COLOURS.BOTH;
+GameController.PlayerSide = COLOURS.BOTH;
+GameController.GameOver = BOOL.FALSE;
+
+let UserMove = {};
+UserMove.from = SQUARES.NO_SQ;
+UserMove.to = SQUARES.NO_SQ;

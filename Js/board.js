@@ -21,7 +21,7 @@ GameBoard.moveList = new Array(MAXDEPTH * MAXPOSITIONMOVES);
 GameBoard.moveScores = new Array(MAXDEPTH * MAXPOSITIONMOVES);
 GameBoard.moveListStart = new Array(MAXDEPTH);
 GameBoard.PvTable = [];
-GameBoard.Pletray = new Array(MAXDEPTH);
+GameBoard.PvArray = new Array(MAXDEPTH);
 GameBoard.searchHistory = new Array( 14 * BRD_SQ_NUM);
 GameBoard.searchKillers = new Array(3 * MAXDEPTH);
 

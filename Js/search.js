@@ -46,7 +46,7 @@ function ClearPvTable() {
 
 function CheckUp() {
 	if (( $.now() - SearchController.start ) > SearchController.time) {
-		SearchController.stop == BOOL.TRUE;
+		SearchController.stop = BOOL.TRUE;
 	}
 }
 
@@ -262,20 +262,22 @@ function SearchPosition() {
 
 	let bestMove = NOMOVE;
 	let bestScore = -INFINITE;
+	let Score = -INFINITE;
 	let currentDepth = 0;
 	let line;
 	let PvNum;
 	let c;
 	ClearForSearch();
 	
-	for( currentDepth = 1; currentDepth <= /*SearchController.depth*/ 6; ++currentDepth) {	
+	for( currentDepth = 1; currentDepth <= SearchController.depth; ++currentDepth) {	
 	
-		bestScore = AlphaBeta(-INFINITE, INFINITE, currentDepth);
+		Score = AlphaBeta(-INFINITE, INFINITE, currentDepth);
 					
 		if(SearchController.stop == BOOL.TRUE) {
 			break;
 		}
 		
+		bestScore = Score; 
 		bestMove = ProbePvTable();
 		line = 'D:' + currentDepth + ' Best:' + PrMove(bestMove) + ' Score:' + bestScore + 
 				' nodes:' + SearchController.nodes;
@@ -283,7 +285,7 @@ function SearchPosition() {
 		PvNum = GetPvLine(currentDepth);
 		line += ' Pv:';
 		for( c = 0; c < PvNum; ++c) {
-			line += ' ' + PrMove(GameBoard.Pletray[c]);
+			line += ' ' + PrMove(GameBoard.PvArray[c]);
 		}
 		if(currentDepth!=1) {
 			line += (" Ordering:" + ((SearchController.fhf/SearchController.fh)*100).toFixed(2) + "%");
@@ -291,8 +293,23 @@ function SearchPosition() {
 		console.log(line);
 						
 	}	
-	
+
 	SearchController.best = bestMove;
 	SearchController.thinking = BOOL.FALSE;
+	UpdateDOMStats(bestScore, currentDepth);
+}
 
+function UpdateDOMStats(dom_score, dom_depth) {
+
+	let scoreText = "Score: " + (dom_score / 100).toFixed(2);
+	if(Math.abs(dom_score) > MATE - MAXDEPTH) {
+		scoreText = "Score: Mate In " + (MATE - (Math.abs(dom_score))-1) + " moves";
+	}
+	
+	$("#OrderingOut").text("Ordering: " + ((SearchController.fhf/SearchController.fh)*100).toFixed(2) + "%");
+	$("#DepthOut").text("Depth: " + dom_depth);
+	$("#ScoreOut").text(scoreText);
+	$("#NodesOut").text("Nodes: " + SearchController.nodes);
+	$("#TimeOut").text("Time: " + (($.now()-SearchController.start)/1000).toFixed(1) + "s");
+	$("#BestOut").text("BestMove: " + PrMove(SearchController.best));
 }

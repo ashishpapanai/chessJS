@@ -1,8 +1,7 @@
 $(function() {
 	init();
 	console.log("Main Init Called");	
-	ParseFen(START_FEN);
-	PrintBoard();
+	NewGame(START_FEN);
 });
 
 function InitFilesRanksBrd() {
@@ -88,11 +87,62 @@ function InitBoardVars() {
 	}
 }
 
+function InitBoardSquares() {
+	let light = 0;
+	let rankName;
+	let fileName;
+	let divString;
+	let lastLight = 0;
+	let rankIter = 0;
+	let fileIter = 0;
+	let lightString;
+	
+	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
+		light = lastLight ^ 1;
+		lastLight ^= 1;
+		rankName = "rank" + (rankIter+1);
+		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
+			fileName = "file" + (fileIter+1);
+			
+			if(light==0) lightString="Light";
+			else lightString = "Dark";
+			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
+			light^=1;
+			$("#Board").append(divString);
+ 		}
+ 	}
+}
+
+function InitBoardSquares() {
+	let light = 1;
+	let rankName;
+	let fileName;
+	let divString;
+	let rankIter;
+	let fileIter;
+	let lightString;
+	
+	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
+		light ^= 1;
+		rankName = "rank" + (rankIter + 1);
+		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
+			fileName = "file" + (fileIter + 1);
+			if(light == 0) lightString="Light";
+			else lightString = "Dark";
+			light^=1;
+			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
+			$("#Board").append(divString);
+		}
+	}
+	
+}
+
 function init() {
 	console.log("init() called");
 	InitFilesRanksBrd();
 	InitHashKeys();
 	InitSq120To64();
 	InitBoardVars();
-	InitMvvLva() ;
+	InitMvvLva();
+	InitBoardSquares();
 }
