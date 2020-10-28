@@ -24,6 +24,9 @@ let BOOL = { FALSE:0, TRUE:1 };
 let MAXGAMEMOVES = 2048;
 let MAXPOSITIONMOVES = 256;
 let MAXDEPTH = 64;
+let INFINITE = 30000;
+let MATE = 29000;
+let PVENTRIES = 10000;
 
 let FilesBrd = new Array(BRD_SQ_NUM);
 let RanksBrd = new Array(BRD_SQ_NUM);
@@ -79,6 +82,17 @@ function RAND_32() {
 
 }
 
+let Mirror64 = [
+56	,	57	,	58	,	59	,	60	,	61	,	62	,	63	,
+48	,	49	,	50	,	51	,	52	,	53	,	54	,	55	,
+40	,	41	,	42	,	43	,	44	,	45	,	46	,	47	,
+32	,	33	,	34	,	35	,	36	,	37	,	38	,	39	,
+24	,	25	,	26	,	27	,	28	,	29	,	30	,	31	,
+16	,	17	,	18	,	19	,	20	,	21	,	22	,	23	,
+8	,	9	,	10	,	11	,	12	,	13	,	14	,	15	,
+0	,	1	,	2	,	3	,	4	,	5	,	6	,	7
+];
+
 function SQ64(sq120) { 
 	return Sq120ToSq64[(sq120)];
 }
@@ -89,6 +103,10 @@ function SQ120(sq64) {
 
 function PCEINDEX(pce, pceNum) {
 	return (pce * 10 + pceNum);
+}
+
+function MIRROR64(sq) {
+	return Mirror64[sq];
 }
 
 let Kings = [PIECES.wK, PIECES.bK];
@@ -106,16 +124,6 @@ let CastlePerm = [
     15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
     15, 15, 15, 15, 15, 15, 15, 15, 15, 15
 ];
-
-/*	
-0000 0000 0000 0000 0000 0111 1111 -> From 0x7F
-0000 0000 0000 0011 1111 1000 0000 -> To >> 7, 0x7F
-0000 0000 0011 1100 0000 0000 0000 -> Captured >> 14, 0xF
-0000 0000 0100 0000 0000 0000 0000 -> EP 0x40000
-0000 0000 1000 0000 0000 0000 0000 -> Pawn Start 0x80000
-0000 1111 0000 0000 0000 0000 0000 -> Promoted Piece >> 20, 0xF
-0001 0000 0000 0000 0000 0000 0000 -> Castle 0x1000000
-*/
 
 
 function FROMSQ(m) { return (m & 0x7F); }
@@ -144,48 +152,3 @@ function HASH_PCE(pce, sq) {
 function HASH_CA() { GameBoard.posKey ^= CastleKeys[GameBoard.castlePerm]; }
 function HASH_SIDE() { GameBoard.posKey ^= SideKey; }
 function HASH_EP() { GameBoard.posKey ^= PieceKeys[GameBoard.enPas]; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
