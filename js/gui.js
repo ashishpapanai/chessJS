@@ -254,17 +254,17 @@ function ThreeFoldRep() {
 
 function CheckResult() {
 	if(GameBoard.fiftyMove >= 100) {
-		 $("#GameStatus").text("GAME DRAWN {fifty move rule}"); 
+		alert('GAME DRAWN: Fifty Move Rule');
 		 return BOOL.TRUE;
 	}
 	
 	if (ThreeFoldRep() >= 2) {
-     	$("#GameStatus").text("GAME DRAWN {3-fold repetition}"); 
+		alert('GAME DRAWN: 3-Fold Repetition');
      	return BOOL.TRUE;
     }
 	
 	if (DrawMaterial() == BOOL.TRUE) {
-     	$("#GameStatus").text("GAME DRAWN {insufficient material to mate}"); 
+		alert('GAME DRAWN: Insufficient Material To Mate');
      	return BOOL.TRUE;
     }
     
@@ -289,14 +289,15 @@ function CheckResult() {
 	
 	if(InCheck == BOOL.TRUE) {
 		if(GameBoard.side == COLOURS.WHITE) {
-		  alert('GAME OVER: black mates');
+		  alert('GAME OVER: Black Mates');
 	      return BOOL.TRUE;
         } else {
-		  alert('GAME OVER: white mates');
+		  alert('GAME OVER: White Mates');
 	      return BOOL.TRUE;
         }
 	} else {
-		$("#GameStatus").text("GAME DRAWN {stalemate}");return BOOL.TRUE;
+		alert('GAME DRAWN: Stalemate');
+		return BOOL.TRUE;
 	}
 	
 	return BOOL.FALSE;	
