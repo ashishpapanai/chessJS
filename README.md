@@ -1,6 +1,6 @@
 # chessJS: A GOFAI Chess Engine
 #
-# #**ChessJS: How to contribute to this repository**
+## **ChessJS: How to contribute to this repository**
 
 To contribute to this repository, follow the following steps:
 
@@ -14,7 +14,7 @@ To contribute to this repository, follow the following steps:
 _All we need is your contributions and patience._
 
 #
-# # **Chess JS**
+## **Chess JS**
 
 Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching in a tree, Min-Max is a Good Old Fashion Artificial Intelligence (GOFAI) algorithm. The algorithm is a naïve algorithm and for its optimization Alpha-beta pruning is incorporated.
 
@@ -45,4 +45,5 @@ Special Thanks to [Anshuman Pandey](https://github.com/anshuman9999/) for being 
 Special Thanks to [Piyush Gupta](https://github.com/gupta-piyush19) for adding additional features to the website and providing valuable inputs in styling of this project.
 
 This project wouldn&#39;t have been possible without referring additional websites and research papers from IBM DeepBlue, Deep Mind and Stockfish, Every details about the referred websites is smentioned in the references section.
+#
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
