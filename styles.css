@@ -1,7 +1,77 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+.thinking-time-text {
+	display: inline;
+}
+
+.top-div {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+/* #fenInDiv {
+	position: relative;
+	left: -150px;
+} */
+
+#fenInDiv {
+	position: absolute;
+	width: 65%;
+	top: 80%;
+	left: 30%;
+}
+
+.wrapper-button {
+	background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.question-mark {
+	cursor: pointer;
+}
+
+#fenIn {
+	width: 500px;
+	height: 25px;
+	border-radius: 2px;
+	border: 1px solid #333;
+}
+
+#SetFen {
+	font-family: 'PT Sans', sans-serif;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	background-color: #051F23;
+	border: none;
+	border-radius: 5px;
+	color: #eee;
+	cursor: pointer;
+}
+
+.container-div {
+	width: 100vw;
+}
 
 #Board {
 	position: relative;
-	margin-left: 250px;
+	margin-left: 25%;
 	top: 20px;
 	left: 60px;
 	width: 480px;
@@ -11,13 +81,14 @@
 }
 
 #EngineOutput {
+	margin-top: 40px;
+	margin-left: 7%;
 	position: absolute;
 	left: 950px;
 	top: 120px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 #button-primary {

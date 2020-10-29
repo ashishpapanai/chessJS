@@ -1,0 +1,14 @@
+#Board {
+    margin-left: 5%;
+}
+
+.fen-form-input-div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#fenIn {
+    width: 450px;
+    margin-right: 10px;
+}
