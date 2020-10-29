@@ -1,5 +1,4 @@
 # chessJS: A GOFAI Chess Engine
-#
 ## **ChessJS: How to contribute to this repository**
 
 To contribute to this repository, follow the following steps:
