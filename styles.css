@@ -1,16 +1,13 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
 
 #Board {
 	position: relative;
-	margin: 50px 25%;
+	margin-left: 250px;
+	top: 20px;
+	left: 60px;
 	width: 480px;
 	height: 480px;
-	border: 2px solid black;
-	box-shadow: 2px 2px 2px black;
+	border-style: solid;
+	border-width: 2px;
 }
 
 #EngineOutput {
