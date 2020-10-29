@@ -1,101 +1,238 @@
-#FenInDiv {
-	position: relative;
-	left: 60px;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-#fenIn { 
- width: 480px;
- left: 60px;
-}
 
 #Board {
 	position: relative;
-	top: 20px;
-	left: 60px;
+	margin: 50px 25%;
 	width: 480px;
 	height: 480px;
-	border-style: solid;
-	border-width: 2px;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px black;
 }
 
 #EngineOutput {
 	position: absolute;
-	left: 600px;
-	top: 250px;	
+	left: 950px;
+	top: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+#button-primary {
+	display: inline-block;
+	width: 500px;
+	height: 25px;
 }
 
 .Square {
-	position: absolute;	
+	position: absolute;
 	width: 60px;
 	height: 60px;
 }
 
 .Dark {
-	background-color:#969696;
+	background-color: #969696;
 }
 
 .Light {
-	background-color:#ffffff;
+	background-color: #ffffff;
 }
 
 .SqSelected {
-	background-color:#dbdbdb;
+	background-color: #dbdbdb;
 }
 
-.rank1 { 
-	top: 420px; 
-	}
-.rank2 {
-	top: 360px; 
-	}
-.rank3 { 
-	top: 300px; 
-	}
-.rank4 {
-	 top: 240px; 
-	 }
-.rank5 { 
-	top: 180px; 
-	}
-.rank6 { 
-	top: 120px; 
-	}
-.rank7 { 
-	top: 60px; 
-	}
-.rank8 { 
-	top: 0px; 
-	}
+.rank1 {
+	top: 420px;
+}
 
-.file1 { 
-	left: 0px; 
-	}
-.file2 { 
-	left: 60px; 
-	}
-.file3 { 
-	left: 120px; 
-	}
-.file4 
-{ 
+.rank1.file1::after {
+	content: 'A';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file2::after {
+	content: 'B';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file3::after {
+	content: 'C';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file4::after {
+	content: 'D';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file5::after {
+	content: 'E';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file6::after {
+	content: 'F';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file7::after {
+	content: 'G';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.rank1.file8::after {
+	content: 'H';
+	font-size: 1.1rem;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+}
+
+.file1::before {
+	content: '1';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+
+.rank8.file1::before {
+	content: '8';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank7.file1::before {
+	content: '7';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank6.file1::before {
+	content: '6';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank5.file1::before {
+	content: '5';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank4.file1::before {
+	content: '4';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank3.file1::before {
+	content: '3';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+.rank2.file1::before {
+	content: '2';
+	font-size: 1.2rem;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+}
+
+.rank2 {
+	top: 360px;
+}
+
+.rank3 {
+	top: 300px;
+}
+
+.rank4 {
+	top: 240px;
+}
+
+.rank5 {
+	top: 180px;
+}
+
+.rank6 {
+	top: 120px;
+}
+
+.rank7 {
+	top: 60px;
+}
+
+.rank8 {
+	top: 0px;
+}
+
+.file1 {
+	left: 0px;
+}
+
+.file2 {
+	left: 60px;
+}
+
+.file3 {
+	left: 120px;
+}
+
+.file4 {
 	left: 180px;
 }
-.file5 
-{
-	 left: 240px; 
+
+.file5 {
+	left: 240px;
 }
-.file6 
-{
-	 left: 300px; 
+
+.file6 {
+	left: 300px;
 }
-.file7 
-{
-	 left: 360px; 
+
+.file7 {
+	left: 360px;
 }
-.file8 
-{
-	 left: 420px;
+
+.file8 {
+	left: 420px;
 }
+
 .Piece {
 	position: absolute;
 }
