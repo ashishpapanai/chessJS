@@ -87,6 +87,7 @@ function ClickedSquare(pageX, pageY) {
 	let workedY = Math.floor(position.top);
 
 	console.log('test');
+	console.log('test1');
 
 	if(window.innerWidth <= 1300) {
 		workedX = Math.floor(position.left + (window.innerWidth) * (0.10) );
