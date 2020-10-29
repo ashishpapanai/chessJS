@@ -1,3 +1,7 @@
+#Board {
+	position: relative;
+	margin-left: 250px;
+
 #FenInDiv {
 	position: relative;
 	left: 60px;

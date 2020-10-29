@@ -83,7 +83,7 @@ function ClickedSquare(pageX, pageY) {
 	console.log('ClickedSquare() at ' + pageX + ',' + pageY);
 	let position = $('#Board').position();
 	
-	let workedX = Math.floor(position.left);
+	let workedX = Math.floor(position.left + 250);
 	let workedY = Math.floor(position.top);
 	
 	pageX = Math.floor(pageX);
