@@ -11,7 +11,6 @@ $('#TakeButton').click( function () {
 	}
 });
 
-
 var UserMove = {};
 UserMove.from = SQUARES.NO_SQ;
 UserMove.to = SQUARES.NO_SQ;
@@ -82,9 +81,25 @@ function SetSqSelected(sq) {
 function ClickedSquare(pageX, pageY) {
 	console.log('ClickedSquare() at ' + pageX + ',' + pageY);
 	let position = $('#Board').position();
-	
-	let workedX = Math.floor(position.left);
+
+	let workedX = Math.floor(position.left + 250);
 	let workedY = Math.floor(position.top);
+
+	if(window.innerWidth <= 1200) {
+		workedX = Math.floor(position.left + 100 );
+	}
+
+	if(window.innerWidth <= 1000) {
+		workedX = Math.floor(position.left + 30 );
+	}
+
+	if(window.innerWidth <= 900) {
+		workedX = Math.floor(position.left + (window.innerWidth) * (0.10) );
+	}
+
+	if(window.innerWidth <= 680) {
+		workedX = Math.floor(position.left + (window.innerWidth) * (0.05) );
+	}
 	
 	pageX = Math.floor(pageX);
 	pageY = Math.floor(pageY);
