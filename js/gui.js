@@ -83,6 +83,7 @@ function ClickedSquare(pageX, pageY) {
 	console.log('ClickedSquare() at ' + pageX + ',' + pageY);
 	let position = $('#Board').position();
 
+
 	let workedX = Math.floor(position.left + ( window.innerWidth ) / 4);
 	let workedY = Math.floor(position.top);
 
@@ -96,6 +97,10 @@ function ClickedSquare(pageX, pageY) {
 	if(window.innerWidth <= 680) {
 		workedX = Math.floor(position.left + (window.innerWidth) * (0.05) );
 	}
+
+	
+	let workedX = Math.floor(position.left + 250);
+	let workedY = Math.floor(position.top);
 	
 	pageX = Math.floor(pageX);
 	pageY = Math.floor(pageY);
@@ -265,17 +270,17 @@ function ThreeFoldRep() {
 
 function CheckResult() {
 	if(GameBoard.fiftyMove >= 100) {
-		 $("#GameStatus").text("GAME DRAWN {fifty move rule}"); 
+		alert('GAME DRAWN: Fifty Move Rule');
 		 return BOOL.TRUE;
 	}
 	
 	if (ThreeFoldRep() >= 2) {
-     	$("#GameStatus").text("GAME DRAWN {3-fold repetition}"); 
+		alert('GAME DRAWN: 3-Fold Repetition');
      	return BOOL.TRUE;
     }
 	
 	if (DrawMaterial() == BOOL.TRUE) {
-     	$("#GameStatus").text("GAME DRAWN {insufficient material to mate}"); 
+		alert('GAME DRAWN: Insufficient Material To Mate');
      	return BOOL.TRUE;
     }
     
@@ -300,14 +305,15 @@ function CheckResult() {
 	
 	if(InCheck == BOOL.TRUE) {
 		if(GameBoard.side == COLOURS.WHITE) {
-	      $("#GameStatus").text("GAME OVER {black mates}");
+		  alert('GAME OVER: Black Mates');
 	      return BOOL.TRUE;
         } else {
-	      $("#GameStatus").text("GAME OVER {white mates}");
+		  alert('GAME OVER: White Mates');
 	      return BOOL.TRUE;
         }
 	} else {
-		$("#GameStatus").text("GAME DRAWN {stalemate}");return BOOL.TRUE;
+		alert('GAME DRAWN: Stalemate');
+		return BOOL.TRUE;
 	}
 	
 	return BOOL.FALSE;	
