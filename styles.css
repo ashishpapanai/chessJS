@@ -1,72 +1,3 @@
-body {
-	font-family: 'PT Sans', sans-serif;
-	overflow: hidden;
-}
-
-h1 {
-	font-size: 2.5rem;
-}
-
-/* .Piece.rank8:nth-child(odd) {
-	background-color: white;
-}
-
-.Piece.rank7:nth-child(even) {
-	background-color: white;
-}
-
-.Piece.rank2:nth-child(odd) {
-	background-color: white;
-}
-
-.Piece.rank1:nth-child(even) {
-	background-color: white;
-} */
-
-#top-div {
-	position: relative;
-	left: 40%;
-	margin-bottom: 50px;
-	font-weight: bold;
-}
-
-.wrapper-button {
-	background:none;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
-}
-
-.question-mark {
-	cursor: pointer;
-}
-
-#fenInDiv {
-	position: relative;
-	left: -150px;
-}
-
-#fenIn {
-	width: 500px;
-	height: 25px;
-	border-radius: 2px;
-	border: 1px solid #333;
-}
-
-#SetFen {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background-color: #051F23;
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
-}
 
 #Board {
 	position: relative;
@@ -79,54 +10,20 @@ h1 {
 	border-width: 2px;
 }
 
-.button-container-1 {
-	width: fit-content;
-	display: flex;
-	margin-bottom: 20px;
-}
-
-.button-container-2 {
-	width: fit-content;
-	display: flex;
-}
-
-.button-primary {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background: #3239CD;
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
-}
-
-.button-secondary {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background: #3C97C3;
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
-}
-
 #EngineOutput {
-	margin-top: 70px;
 	position: absolute;
-	left: 880px;
-	top: 150px;
+	left: 950px;
+	top: 120px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-evenly;
+}
+
+#button-primary {
+	display: inline-block;
+	width: 500px;
+	height: 25px;
 }
 
 .Square {
@@ -230,7 +127,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank7.file1::before {
 	content: '7';
 	font-size: 1.2rem;
@@ -238,7 +134,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank6.file1::before {
 	content: '6';
 	font-size: 1.2rem;
@@ -246,7 +141,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank5.file1::before {
 	content: '5';
 	font-size: 1.2rem;
@@ -254,7 +148,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank4.file1::before {
 	content: '4';
 	font-size: 1.2rem;
@@ -262,7 +155,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank3.file1::before {
 	content: '3';
 	font-size: 1.2rem;
@@ -270,7 +162,6 @@ h1 {
 	top: 30px;
 	left: -20px;
 }
-
 .rank2.file1::before {
 	content: '2';
 	font-size: 1.2rem;
