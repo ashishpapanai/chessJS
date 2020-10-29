@@ -1,0 +1,29 @@
+.container-div {
+    width: 100vw;
+}
+
+.top-div {
+    width: 100%;
+    position: relative;
+    display: block;
+	margin-bottom: 70px;
+}
+
+.top-div h1 {
+    text-align: center;
+}
+
+#fenInDiv {
+    display: block;
+    position: relative;
+    left: 15%;
+}
+
+#Board {
+    margin-left: 10%;
+}
+
+#EngineOutput {
+    top: 100%;
+    left: 10%;
+}

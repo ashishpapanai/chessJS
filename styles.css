@@ -1,7 +1,77 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+.thinking-time-text {
+	display: inline;
+}
+
+.top-div {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+/* #fenInDiv {
+	position: relative;
+	left: -150px;
+} */
+
+#fenInDiv {
+	position: absolute;
+	width: 65%;
+	top: 80%;
+	left: 30%;
+}
+
+.wrapper-button {
+	background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.question-mark {
+	cursor: pointer;
+}
+
+#fenIn {
+	width: 500px;
+	height: 25px;
+	border-radius: 2px;
+	border: 1px solid #333;
+}
+
+#SetFen {
+	font-family: 'PT Sans', sans-serif;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	background-color: #051F23;
+	border: none;
+	border-radius: 5px;
+	color: #eee;
+	cursor: pointer;
+}
+
+.container-div {
+	width: 100vw;
+}
 
 #Board {
 	position: relative;
-	margin-left: 250px;
+	margin-left: 25%;
 	top: 20px;
 	left: 60px;
 	width: 480px;
@@ -10,20 +80,54 @@
 	border-width: 2px;
 }
 
-#EngineOutput {
-	position: absolute;
-	left: 950px;
-	top: 120px;
+.button-container-1 {
+	width: fit-content;
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-evenly;
+	margin-bottom: 20px;
 }
 
-#button-primary {
+.button-container-2 {
+	width: fit-content;
+	display: flex;
+}
+
+.button-primary {
+	font-family: 'PT Sans', sans-serif;
 	display: inline-block;
-	width: 500px;
-	height: 25px;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	background: #3239CD;
+	border: none;
+	border-radius: 5px;
+	color: #eee;
+	cursor: pointer;
+}
+
+.button-secondary {
+	font-family: 'PT Sans', sans-serif;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	background: #3C97C3;
+	border: none;
+	border-radius: 5px;
+	color: #eee;
+	cursor: pointer;
+}
+
+#EngineOutput {
+	margin-top: 40px;
+	margin-left: 7%;
+	position: absolute;
+	left: 880px;
+	top: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .Square {
@@ -127,6 +231,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank7.file1::before {
 	content: '7';
 	font-size: 1.2rem;
@@ -134,6 +239,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank6.file1::before {
 	content: '6';
 	font-size: 1.2rem;
@@ -141,6 +247,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank5.file1::before {
 	content: '5';
 	font-size: 1.2rem;
@@ -148,6 +255,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank4.file1::before {
 	content: '4';
 	font-size: 1.2rem;
@@ -155,6 +263,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank3.file1::before {
 	content: '3';
 	font-size: 1.2rem;
@@ -162,6 +271,7 @@
 	top: 30px;
 	left: -20px;
 }
+
 .rank2.file1::before {
 	content: '2';
 	font-size: 1.2rem;
