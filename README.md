@@ -44,5 +44,14 @@ Special Thanks to [Anshuman Pandey](https://github.com/anshuman9999/) for being 
 Special Thanks to [Piyush Gupta](https://github.com/gupta-piyush19) for adding additional features to the website and providing valuable inputs in styling of this project.
 
 This project wouldn&#39;t have been possible without referring additional websites and research papers from IBM DeepBlue, Deep Mind and Stockfish, Every details about the referred websites is smentioned in the references section.
+
+**References and Citations:**
+
+[1] D. E. Knuth and R. W. Moore, &quot;An Analysis of Alpha-Beta Priming&#39;,&quot; 1975.
+
+[2] D. Silver _et al._, &quot;A general reinforcement learning algorithm that masters chess, shogi and Go through self-play,&quot; 2018.
+
+[3] M. Campbell, A. J. Hoane, and F. H. Hsu, &quot;Deep Blue,&quot; _Artif. Intell._, 2002, doi: 10.1016/S0004-3702(01)00129-1.
+
 #
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
