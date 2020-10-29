@@ -82,10 +82,11 @@ function SetSqSelected(sq) {
 function ClickedSquare(pageX, pageY) {
 	console.log('ClickedSquare() at ' + pageX + ',' + pageY);
 	let position = $('#Board').position();
-	
 
 	let workedX = Math.floor(position.left + ( window.innerWidth ) / 4);
 	let workedY = Math.floor(position.top);
+
+	console.log('test');
 
 	if(window.innerWidth <= 1300) {
 		workedX = Math.floor(position.left + (window.innerWidth) * (0.10) );
