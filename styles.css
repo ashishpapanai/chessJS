@@ -64,6 +64,7 @@ h1 {
 
 .question-mark {
 	cursor: pointer;
+	color: #eee;
 }
 
 #fenIn {
@@ -80,10 +81,10 @@ h1 {
 	height: 30px;
 	text-align: center;
 	margin-right: 20px;
-	background-color: #051F23;
+	background-color: antiquewhite;
 	border: none;
 	border-radius: 5px;
-	color: #eee;
+	color: #333;
 	cursor: pointer;
 }
 
