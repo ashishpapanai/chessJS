@@ -10,6 +10,24 @@ h1 {
 	font-size: 2.2rem;
 }
 
+#top-links {
+	display: flex;
+	width: 10%;
+	justify-content: space-evenly;
+}
+
+.link-seperator {
+	width: 2px;
+	height: 30px;
+	background-color: #eee;
+}
+
+.top-link {
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: #eee;
+}
+
 .thinking-time-text {
 	display: inline;
 }
