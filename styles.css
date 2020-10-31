@@ -2,10 +2,71 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	color: white;
 	background-image: url('images/Background_Img.jpeg');
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	overflow-x: hidden;
 	background-size: 1600px 750px;
 }
+
+#simple-modal {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+	background-color: #f4f4f4;
+	margin: 50% auto;
+	color: black;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	height: 220px;
+	box-shadow: 2px 2px 2px #333;
+}
+
+.modal-text {
+	padding: 20px;
+}
+
+.closeBtn-div {
+	width: 100%;
+	height: 25%;
+	background-color: salmon;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.closeBtn {
+	color: #333;
+	transform: scale(1.2);
+	margin: auto 10px;
+}
+
+.closeBtn:hover {
+	color: #eee;
+	cursor: pointer;
+}
+
+.modal-footer {
+	margin: 0 auto;
+}
+
+.understand-button {
+	margin-bottom: 10px;
+	padding: 5px;
+	color: white;
+	background-color: steelblue;
+	border: none;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #333;
+}
+
 h1 {
 	font-size: 2.2rem;
 }
@@ -41,7 +102,6 @@ h1 {
 	position: relative;
 	margin-bottom: 70px;
 }
-
 
 #fenInDiv {
 	position: absolute;
@@ -382,7 +442,6 @@ h1 {
 	}
 }
 
-
 @media(max-width:1000px) {
 	#top-links {
 		width: 20%;
@@ -406,7 +465,7 @@ h1 {
 	#top-links {
 		width: 25%;
 	}
-	body{
+	body {
 		background-size: 1800px auto;
 	}
 	.container-div {
@@ -439,7 +498,7 @@ h1 {
 @media(max-width: 800px) {
 	#fenInDiv {
 		left: 140px;
-	}	
+	}
 }
 
 @media(max-width: 750px) {
@@ -451,8 +510,10 @@ h1 {
 	}
 }
 
-
 @media(max-width: 680px) {
+	#simple-modal {
+		display: block;
+	}
 	#Board {
 		margin-left: -10%;
 		border: none;
