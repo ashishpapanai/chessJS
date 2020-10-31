@@ -455,7 +455,7 @@ h1 {
 @media(max-width: 680px) {
 
 	#Board {
-		margin-left: 5%;
+		margin-left: 2%;
 	}
 	.fen-form-input-div {
 		display: flex;
