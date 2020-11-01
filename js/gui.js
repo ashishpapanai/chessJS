@@ -11,6 +11,17 @@ $('#TakeButton').click(function() {
     }
 });
 
+$('#ResignButton').click(function(){
+    if(GameBoard.side === COLOURS.WHITE) {
+        alert('White Resings, Black Wins.');
+        NewGame(START_FEN);
+
+    }else{
+        alert('Black Resings, White Wins.');
+        NewGame(START_FEN);
+    }
+});
+
 var UserMove = {};
 UserMove.from = SQUARES.NO_SQ;
 UserMove.to = SQUARES.NO_SQ;
