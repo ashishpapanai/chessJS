@@ -164,7 +164,6 @@ a:visited {
         margin-top: 20px;
         border-radius: 5px;
     }
-
     .credit-card-image {
         width: 40%;
         height: 100%;
@@ -184,15 +183,26 @@ a:visited {
     .credit-card-content {
         width: 60%;
         display: flex;
+        position: relative;
     }
-
     #credits-type {
         display: none;
     }
-
     .vertical {
         display: block;
         margin-top: 50px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.7rem;
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
     }
-
+    #heading-tertiary {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #333;
+        margin-top: 30px;
+        width: 50%;
+    }
 }
