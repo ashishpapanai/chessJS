@@ -170,6 +170,14 @@ h1 {
 .button-container-2 {
 	width: fit-content;
 	display: flex;
+	margin-bottom: 20px;
+}
+
+.button-container-3 {
+	width: fit-content;
+	display: grid;
+	left: 100%;
+	margin-bottom: 20px;
 }
 
 .button-primary {
@@ -194,6 +202,21 @@ h1 {
 	text-align: center;
 	margin-right: 20px;
 	background: #3C97C3;
+	border: none;
+	border-radius: 5px;
+	color: #eee;
+	cursor: pointer;
+}
+
+.button-tertiary {
+	font-family: 'PT Sans', sans-serif;
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	position: absolute;
+	text-align: center;
+	left: 70px;
+	background: rgb(172, 57, 57);
 	border: none;
 	border-radius: 5px;
 	color: #eee;
