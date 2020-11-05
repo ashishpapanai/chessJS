@@ -240,12 +240,13 @@ h1 {
 }
 
 .Dark {
-	background-color: #969696;
+	background-color: rgba(31, 66, 27, 1);
 }
 
 .Light {
 	background-color: #ffffff;
 }
+
 
 .SqSelected {
 	background-color: #dbdbdb;
