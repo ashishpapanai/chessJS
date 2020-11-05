@@ -14,11 +14,11 @@ $('#TakeButton').click(function() {
 $('#ResignButton').click(function(){
     if(GameBoard.side === COLOURS.WHITE) {
         alert('White Resigns, Black Wins.');
-        NewGame(START_FEN);
+        return BOOL.TRUE;
 
     }else{
         alert('Black Resigns, White Wins.');
-        NewGame(START_FEN);
+        return BOOL.TRUE;
     }
 });
 

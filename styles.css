@@ -1,567 +1,566 @@
 body {
-	font-family: 'PT Sans', sans-serif;
-	color: white;
-	background-image: url('images/Background_Img.jpeg');
-	background-repeat: no-repeat;
-	overflow-x: hidden;
-	background-size: 1600px 750px;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    background-image: url('images/Background_Img.jpeg');
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-size: 1600px 750px;
 }
 
 #simple-modal {
-	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 1;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-	background-color: #f4f4f4;
-	margin: 50% auto;
-	color: black;
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	height: 220px;
-	box-shadow: 2px 2px 2px #333;
+    background-color: #f4f4f4;
+    margin: 50% auto;
+    color: black;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    box-shadow: 2px 2px 2px #333;
 }
 
 .modal-text {
-	padding: 20px;
+    padding: 20px;
 }
 
 .closeBtn-div {
-	width: 100%;
-	height: 25%;
-	background-color: salmon;
-	display: flex;
-	justify-content: flex-end;
+    width: 100%;
+    height: 25%;
+    background-color: salmon;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .closeBtn {
-	color: #333;
-	transform: scale(1.2);
-	margin: auto 10px;
+    color: #333;
+    transform: scale(1.2);
+    margin: auto 10px;
 }
 
 .closeBtn:hover {
-	color: #eee;
-	cursor: pointer;
+    color: #eee;
+    cursor: pointer;
 }
 
 .modal-footer {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .understand-button {
-	margin-bottom: 10px;
-	padding: 5px;
-	color: white;
-	background-color: steelblue;
-	border: none;
-	cursor: pointer;
-	box-shadow: 1px 1px 1px #333;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: white;
+    background-color: steelblue;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #333;
 }
 
 h1 {
-	font-size: 2.2rem;
+    font-size: 2.2rem;
 }
 
 #top-links {
-	display: flex;
-	width: 10%;
-	justify-content: space-evenly;
+    display: flex;
+    width: 10%;
+    justify-content: space-evenly;
 }
 
 .link-seperator {
-	width: 2px;
-	height: 30px;
-	background-color: #eee;
+    width: 2px;
+    height: 30px;
+    background-color: #eee;
 }
 
 .top-link {
-	text-decoration: none;
-	font-size: 1.2rem;
-	color: #eee;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #eee;
 }
 
 .thinking-time-text {
-	display: inline;
+    display: inline;
 }
 
 .top-div {
-	width: 100%;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	margin-bottom: 70px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 70px;
 }
 
 #fenInDiv {
-	position: absolute;
-	width: 100%;
-	top: 80%;
-	left: 310px;
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    left: 310px;
 }
 
 .wrapper-button {
-	background: none;
-	border: none;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 .question-mark {
-	cursor: pointer;
-	color: #eee;
+    cursor: pointer;
+    color: #eee;
 }
 
 #fenIn {
-	width: 700px;
-	height: 25px;
-	border-radius: 2px;
-	border: 1px solid #333;
-	margin-right: 8px;
+    width: 700px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid #333;
+    margin-right: 8px;
 }
 
 #SetFen {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background-color: antiquewhite;
-	border: none;
-	border-radius: 5px;
-	color: black;
-	cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-right: 20px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
 }
 
 .container-div {
-	width: 100vw;
+    width: 100vw;
 }
 
 #Board {
-	position: relative;
-	margin-left: 250px;
-	top: 20px;
-	left: 60px;
-	width: 480px;
-	height: 480px;
-	border-style: solid;
-	border-width: 2px;
-	margin-right: 0;
+    position: relative;
+    margin-left: 250px;
+    top: 20px;
+    left: 60px;
+    width: 480px;
+    height: 480px;
+    border-style: solid;
+    border-width: 2px;
+    margin-right: 0;
 }
 
 .button-container-1 {
-	width: fit-content;
-	display: flex;
-	margin-bottom: 20px;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .button-container-2 {
-	width: fit-content;
-	display: flex;
-	margin-bottom: 20px;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .button-container-3 {
-	width: fit-content;
-	display: grid;
-	left: 100%;
-	margin-bottom: 20px;
+    width: fit-content;
+    display: grid;
+    left: 100%;
+    margin-bottom: 20px;
 }
 
 .button-primary {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background: #3239CD;
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-right: 20px;
+    background: #3239CD;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    cursor: pointer;
 }
 
 .button-secondary {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	text-align: center;
-	margin-right: 20px;
-	background: #3C97C3;
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    margin-right: 20px;
+    background: #3C97C3;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    cursor: pointer;
 }
 
 .button-tertiary {
-	font-family: 'PT Sans', sans-serif;
-	display: inline-block;
-	width: 120px;
-	height: 30px;
-	position: absolute;
-	text-align: center;
-	left: 70px;
-	background: rgb(172, 57, 57);
-	border: none;
-	border-radius: 5px;
-	color: #eee;
-	cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    left: 70px;
+    background: rgb(172, 57, 57);
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    cursor: pointer;
 }
 
 #EngineOutput {
-	margin-top: 40px;
-	position: absolute;
-	left: 850px;
-	top: 180px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    margin-top: 40px;
+    position: absolute;
+    left: 850px;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Square {
-	position: absolute;
-	width: 60px;
-	height: 60px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
 }
 
 .Dark {
-	background-color: rgba(31, 66, 27, 1);
+    background-color: rgb(55, 124, 46);
 }
 
 .Light {
-	background-color: #ffffff;
+    background-color: #ffffff;
 }
 
-
 .SqSelected {
-	background-color: #dbdbdb;
+    background-color: #dbdbdb;
 }
 
 .rank1 {
-	top: 420px;
+    top: 420px;
 }
 
 .rank1.file1::after {
-	content: 'A';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'A';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file2::after {
-	content: 'B';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'B';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file3::after {
-	content: 'C';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'C';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file4::after {
-	content: 'D';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'D';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file5::after {
-	content: 'E';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'E';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file6::after {
-	content: 'F';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'F';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file7::after {
-	content: 'G';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'G';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .rank1.file8::after {
-	content: 'H';
-	font-size: 1.1rem;
-	position: absolute;
-	top: 70px;
-	left: 30px;
+    content: 'H';
+    font-size: 1.1rem;
+    position: absolute;
+    top: 70px;
+    left: 30px;
 }
 
 .file1::before {
-	content: '1';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '1';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank8.file1::before {
-	content: '8';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '8';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank7.file1::before {
-	content: '7';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '7';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank6.file1::before {
-	content: '6';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '6';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank5.file1::before {
-	content: '5';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '5';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank4.file1::before {
-	content: '4';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '4';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank3.file1::before {
-	content: '3';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '3';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank2.file1::before {
-	content: '2';
-	font-size: 1.2rem;
-	position: absolute;
-	top: 30px;
-	left: -20px;
+    content: '2';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30px;
+    left: -20px;
 }
 
 .rank2 {
-	top: 360px;
+    top: 360px;
 }
 
 .rank3 {
-	top: 300px;
+    top: 300px;
 }
 
 .rank4 {
-	top: 240px;
+    top: 240px;
 }
 
 .rank5 {
-	top: 180px;
+    top: 180px;
 }
 
 .rank6 {
-	top: 120px;
+    top: 120px;
 }
 
 .rank7 {
-	top: 60px;
+    top: 60px;
 }
 
 .rank8 {
-	top: 0px;
+    top: 0px;
 }
 
 .file1 {
-	left: 0px;
+    left: 0px;
 }
 
 .file2 {
-	left: 60px;
+    left: 60px;
 }
 
 .file3 {
-	left: 120px;
+    left: 120px;
 }
 
 .file4 {
-	left: 180px;
+    left: 180px;
 }
 
 .file5 {
-	left: 240px;
+    left: 240px;
 }
 
 .file6 {
-	left: 300px;
+    left: 300px;
 }
 
 .file7 {
-	left: 360px;
+    left: 360px;
 }
 
 .file8 {
-	left: 420px;
+    left: 420px;
 }
 
 .Piece {
-	position: absolute;
+    position: absolute;
 }
 
 @media(max-width:1200px) {
-	#top-links {
-		width: 15%;
-	}
-	#fenInDiv {
-		left: 160px;
-	}
-	#fenIn {
-		width: 650px;
-	}
-	#Board {
-		margin-left: 100px;
-	}
-	#EngineOutput {
-		left: 700px;
-	}
+    #top-links {
+        width: 15%;
+    }
+    #fenInDiv {
+        left: 160px;
+    }
+    #fenIn {
+        width: 650px;
+    }
+    #Board {
+        margin-left: 100px;
+    }
+    #EngineOutput {
+        left: 700px;
+    }
 }
 
 @media(max-width:1000px) {
-	#top-links {
-		width: 20%;
-	}
-	#fenInDiv {
-		left: 90px;
-		width: 100%;
-	}
-	#fenIn {
-		width: 600px;
-	}
-	#Board {
-		margin-left: 30px;
-	}
-	#EngineOutput {
-		left: 620px;
-	}
+    #top-links {
+        width: 20%;
+    }
+    #fenInDiv {
+        left: 90px;
+        width: 100%;
+    }
+    #fenIn {
+        width: 600px;
+    }
+    #Board {
+        margin-left: 30px;
+    }
+    #EngineOutput {
+        left: 620px;
+    }
 }
 
 @media(max-width: 900px) {
-	#top-links {
-		width: 25%;
-	}
-	body {
-		background-size: 1800px auto;
-	}
-	.container-div {
-		width: 100vw;
-	}
-	.top-div {
-		width: 100%;
-		position: relative;
-		display: block;
-		margin-bottom: 70px;
-	}
-	.top-div h1 {
-		text-align: center;
-	}
-	#fenInDiv {
-		left: 150px;
-	}
-	#fenIn {
-		width: 400px;
-	}
-	#Board {
-		margin-left: 10%;
-	}
-	#EngineOutput {
-		top: 750px;
-		left: 10%;
-	}
+    #top-links {
+        width: 25%;
+    }
+    body {
+        background-size: 1800px auto;
+    }
+    .container-div {
+        width: 100vw;
+    }
+    .top-div {
+        width: 100%;
+        position: relative;
+        display: block;
+        margin-bottom: 70px;
+    }
+    .top-div h1 {
+        text-align: center;
+    }
+    #fenInDiv {
+        left: 150px;
+    }
+    #fenIn {
+        width: 400px;
+    }
+    #Board {
+        margin-left: 10%;
+    }
+    #EngineOutput {
+        top: 750px;
+        left: 10%;
+    }
 }
 
 @media(max-width: 800px) {
-	#fenInDiv {
-		left: 140px;
-	}
+    #fenInDiv {
+        left: 140px;
+    }
 }
 
 @media(max-width: 750px) {
-	#fenInDiv {
-		left: 130px;
-	}
-	#fenIn {
-		width: 350px;
-	}
+    #fenInDiv {
+        left: 130px;
+    }
+    #fenIn {
+        width: 350px;
+    }
 }
 
 @media(max-width: 680px) {
-	#simple-modal {
-		display: block;
-	}
-	#Board {
-		margin-left: -10%;
-		border: none;
-	}
-	.Square {
-		position: absolute;
-		width: 50px;
-		height: 50px;
-	}
-	.Piece {
-		position: absolute;
-		width: 50px;
-		height: 50px;
-	}
-	.fen-form-input-div {
-		display: flex;
-		justify-content: space-between;
-	}
-	#fenInDiv {
-		width: 80%;
-		display: none;
-	}
-	#fenIn {
-		width: 350px;
-		margin-right: 10px;
-	}
+    #simple-modal {
+        display: block;
+    }
+    #Board {
+        margin-left: -10%;
+        border: none;
+    }
+    .Square {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+    .Piece {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+    .fen-form-input-div {
+        display: flex;
+        justify-content: space-between;
+    }
+    #fenInDiv {
+        width: 80%;
+        display: none;
+    }
+    #fenIn {
+        width: 350px;
+        margin-right: 10px;
+    }
 }
