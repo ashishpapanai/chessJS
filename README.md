@@ -45,7 +45,7 @@ Special Thanks to [Piyush Gupta](https://github.com/gupta-piyush19) for adding a
 
 This project wouldn&#39;t have been possible without referring additional websites and research papers from IBM DeepBlue, Deep Mind and Stockfish, Every details about the referred websites is smentioned in the references section.
 
-* *The Elo rating mentioned is an approximation based on a series of match conducted with varied difficulties of Stockfish conducted at Lichess.
+### *The Elo rating mentioned is an approximation based on a series of match conducted with varied difficulties of Stockfish conducted at Lichess.
 
 **References and Citations:**
 
