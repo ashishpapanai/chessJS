@@ -1,4 +1,4 @@
-# chessJS: A GOFAI Chess Engine
+# chessJS: A GOFAI Chess Engine (2300+ ELO Rated*)
 ## **ChessJS: How to contribute to this repository**
 
 To contribute to this repository, follow the following steps:
@@ -44,6 +44,8 @@ Special Thanks to [Anshuman Pandey](https://github.com/anshuman9999/) for being 
 Special Thanks to [Piyush Gupta](https://github.com/gupta-piyush19) for adding additional features to the website and providing valuable inputs in styling of this project.
 
 This project wouldn&#39;t have been possible without referring additional websites and research papers from IBM DeepBlue, Deep Mind and Stockfish, Every details about the referred websites is smentioned in the references section.
+
+* *The Elo rating mentioned is an approximation based on a series of match conducted with varied difficulties of Stockfish conducted at Lichess.
 
 **References and Citations:**
 
