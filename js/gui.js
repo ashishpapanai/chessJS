@@ -167,6 +167,7 @@ function MakeUserMove() {
             MoveGUIPiece(parsed);
             CheckAndSet();
             PreSearch();
+            console.log(UserMove.from+" "+UserMove.to);
         }
 
         DeSelectSq(UserMove.from);
