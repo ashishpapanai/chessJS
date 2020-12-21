@@ -27,7 +27,7 @@ Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching 
 
 All rules and regulations of [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/), are applicable to use this repository.
 
-_FIDE prohibits use any engines or electronic device during any live or online rated/professional event, The owner holds no responsibility towards any such malpractices and strictly prohibits the use of this for educational and training purposes._
+_FIDE prohibits use any engines or electronic device during any live or online rated/professional event, The owner holds no responsibility towards any such malpractices and restrains the use for only educational and training purposes._
 
 **For TL;DR conditions:**
 
