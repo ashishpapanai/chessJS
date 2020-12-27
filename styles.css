@@ -4,7 +4,7 @@ body {
     background-image: url('images/Background_Img.jpeg');
     background-repeat: no-repeat;
     overflow-x: hidden;
-    background-size: 100vw 100vh;
+    background-size: 1600px 750px;
 }
 
 #simple-modal {
@@ -213,7 +213,7 @@ h1 {
     display: inline-block;
     width: 120px;
     height: 30px;
-    position: relative;
+    position: absolute;
     text-align: center;
     left: 70px;
     background: rgb(172, 57, 57);
