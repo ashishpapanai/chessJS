@@ -110,6 +110,21 @@
     <script src="js/gui.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <script src="./js/modal.js"></script>
+    <script>
+        // JavaScript Code that resizes background image responsively
+        var zoom = Math.round(window.devicePixelRatio * 100);
+        function bgResize(){
+            if (zoom < 130){
+            var factor = 130/zoom;
+            var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight, 750);
+            var transform = " "+100+"vw "+vh+"px";
+            document.getElementsByTagName('body')[0].style.backgroundSize = transform;   
+            }
+            else document.getElementsByTagName('body')[0].style.backgroundSize = "1600px 750px";
+        }
+        bgResize();
+        window.addEventListener("resize", bgResize);
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ body {
     background-image: url('images/Background_Img.jpeg');
     background-repeat: no-repeat;
     overflow-x: hidden;
-    background-size: 100vw 100vh;
+    background-size: 1600px 750px;
 }
 
 #simple-modal {
