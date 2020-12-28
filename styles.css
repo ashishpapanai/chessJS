@@ -213,7 +213,7 @@ h1 {
     display: inline-block;
     width: 120px;
     height: 30px;
-    position: absolute;
+    position: relative;
     text-align: center;
     left: 70px;
     background: rgb(172, 57, 57);
