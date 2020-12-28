@@ -113,13 +113,17 @@
     <script>
         // JavaScript Code that resizes background image responsively
         var zoom = Math.round(window.devicePixelRatio * 100);
+        //background for mobile
+        function mobileSize(){document.getElementsByTagName('body')[0].style.backgroundSize = "1800px auto";}
         function bgResize(){
             if (zoom < 130){
             var factor = 130/zoom;
             var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight, 750);
             var transform = " "+100+"vw "+vh+"px";
-            document.getElementsByTagName('body')[0].style.backgroundSize = transform;   
+            if (window.innerWidth < 900){mobileSize();}
+            else document.getElementsByTagName('body')[0].style.backgroundSize = transform;   
             }
+            else if (window.innerWidth < 900){mobileSize();}
             else document.getElementsByTagName('body')[0].style.backgroundSize = "1600px 750px";
         }
         bgResize();
