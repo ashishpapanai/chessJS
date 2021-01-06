@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
-
 body {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.5)
-      ),url('images/chess1.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* background-size: 1600px 750px; */
@@ -16,47 +12,52 @@ body {
     margin-bottom: 10%;
     background-attachment: fixed;
 }
-.navbar{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.5)
-      ),url('images/chess1.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+
+.navbar {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-@media (max-width:500px) and (min-width:288px){
-    .navbar{
+
+@media (max-width:500px) and (min-width:288px) {
+    .navbar {
         width: 130%;
     }
 }
-@media (max-width:387px) and (min-width:350px){
-    .navbar{
+
+@media (max-width:387px) and (min-width:350px) {
+    .navbar {
         width: 150%;
     }
 }
-@media (max-width:350px) and (min-width:300px){
-    .navbar{
+
+@media (max-width:350px) and (min-width:300px) {
+    .navbar {
         width: 170%;
     }
 }
-@media (max-width:299px) and (min-width:250px){
-    .navbar{
+
+@media (max-width:299px) and (min-width:250px) {
+    .navbar {
         width: 190%;
     }
 }
-@media (max-width:249px) and (min-width:200px){
-    .navbar{
+
+@media (max-width:249px) and (min-width:200px) {
+    .navbar {
         width: 240%;
     }
 }
-@media (max-width:900px){
+
+@media (max-width:900px) {
     body {
-        background-size:cover !important;
+        background-size: cover !important;
         /* overflow-x: hidden; */
     }
 }
+
 #simple-modal {
     display: none;
     position: fixed;
@@ -152,11 +153,13 @@ h1 {
     position: relative;
     margin-bottom: 70px;
 }
-.top-div h1{
+
+.top-div h1 {
     font-family: 'Andika New Basic', sans-serif;
-    margin-top:30px;
+    margin-top: 30px;
     margin-bottom: 2%;
 }
+
 #fenInDiv {
     position: absolute;
     /* width: 100%; */
@@ -206,7 +209,7 @@ h1 {
 #Board {
     position: relative;
     margin-left: 250px;
-    top: 30px;
+    top: 20px;
     left: 60px;
     width: 480px;
     height: 480px;
