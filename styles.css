@@ -26,6 +26,31 @@ body {
       background-position: center;
       background-attachment: fixed;
 }
+@media (max-width:500px) and (min-width:288px){
+    .navbar{
+        width: 130%;
+    }
+}
+@media (max-width:387px) and (min-width:350px){
+    .navbar{
+        width: 150%;
+    }
+}
+@media (max-width:350px) and (min-width:300px){
+    .navbar{
+        width: 170%;
+    }
+}
+@media (max-width:299px) and (min-width:250px){
+    .navbar{
+        width: 190%;
+    }
+}
+@media (max-width:249px) and (min-width:200px){
+    .navbar{
+        width: 240%;
+    }
+}
 @media (max-width:900px){
     body {
         background-size:cover !important;
