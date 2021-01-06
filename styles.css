@@ -27,9 +27,9 @@ body {
       background-attachment: fixed;
 }
 @media (max-width:900px){
-
     body {
         background-size:cover !important;
+        /* overflow-x: hidden; */
     }
 }
 #simple-modal {
@@ -134,7 +134,7 @@ h1 {
 }
 #fenInDiv {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     top: 80%;
     left: 310px;
 }
@@ -501,7 +501,7 @@ h1 {
     }
     #fenInDiv {
         left: 90px;
-        width: 100%;
+        /* width: 100%; */
     }
     #fenIn {
         width: 600px;
