@@ -153,20 +153,20 @@ $(document).on('click', '.Square', function(e) {
 
 });
 
-//WAD object
-let tock = new Wad({source : '../sounds/sound1.mp3'})
-let tock2 = new Wad({source : '../sounds/sound2.mp3'})
+// //WAD object
+// let tock = new Wad({source : '../sounds/sound1.mp3'})
+// let tock2 = new Wad({source : '../sounds/sound2.mp3'})
 
-//move piece
-let tickTock = async function(){
-    await tock.play()
-    await tock.stop()
-}
-//capture piece
-let tickTock2 = async function(){
-    await tock2.play()
-    await tock2.stop()
-}
+// //move piece
+// let tickTock = async function(){
+//     await tock.play()
+//     await tock.stop()
+// }
+// //capture piece
+// let tickTock2 = async function(){
+//     await tock2.play()
+//     await tock2.stop()
+// }
 
 function MakeUserMove() {
 
@@ -240,12 +240,14 @@ function MoveGUIPiece(move) {
         }
         RemoveGUIPiece(epRemove);
         flag=true;
-        tickTock2();
+        // tickTock2();
+        $('audio#pop')[1].play()
 
     } else if (CAPTURED(move)) {
         RemoveGUIPiece(to);
         flag=true;
-        tickTock2()
+        // tickTock2()
+        $('audio#pop')[1].play()
     }
 
     let file = FilesBrd[to];
@@ -286,7 +288,7 @@ function MoveGUIPiece(move) {
         // tickTock();
     }
     if(!flag){
-        tickTock();
+        $('audio#pop')[0].play()
     }
 }
 
