@@ -4,15 +4,29 @@
 body {
   background-color: #f8f8f8;
 }
-
-h1 {
+.nav {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+}
+.left, .middle, .right {
+  flex: 1;
+}  
+.left,i{
+  color:#643969;
+}
+.middle {
   text-align: center;
+}
+.item {
+  padding: 16px;
+  display: inline-block; 
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to right, #643969, #643453);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} 
 p {
   font-family: "Open Sans", sans-serif;
 }
@@ -176,8 +190,24 @@ a:visited {
 .footer .foot {
   color: #643969;
 }
+@media(max-width:692px){
+  .item{
+    padding: 10px;
+  font-size: 35px;
+  }
+}
 @media (max-width: 640px) {
   .box {
     flex-grow: 0.5;
+  }
+}
+@media(max-width:499px){
+  .item{
+    font-size: 25px;
+  }
+}
+@media(max-width:380px){
+  .item{
+    font-size: 22px;
   }
 }
