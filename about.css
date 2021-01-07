@@ -11,7 +11,7 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 .navbar{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(100, 100, 100, 0.3), rgba(211, 211, 211, 0.5));
+    background-image: linear-gradient( rgba(22, 22, 22, 0.3), rgba(100, 100, 100, 0.4), rgba(211, 211, 211, 0.5));
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
