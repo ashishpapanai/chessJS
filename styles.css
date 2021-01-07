@@ -1,10 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
 body {
     font-family: 'PT Sans', sans-serif;
+    font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: url('images/Background_Img.jpeg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
-    background-size: 1600px 750px;
+    /* background-size: 1600px 750px; */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10%;
+    background-attachment: fixed;
+}
+
+.navbar {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width:500px) and (min-width:288px) {
+    .navbar {
+        width: 130%;
+    }
+}
+
+@media (max-width:387px) and (min-width:350px) {
+    .navbar {
+        width: 150%;
+    }
+}
+
+@media (max-width:350px) and (min-width:300px) {
+    .navbar {
+        width: 170%;
+    }
+}
+
+@media (max-width:299px) and (min-width:250px) {
+    .navbar {
+        width: 190%;
+    }
+}
+
+@media (max-width:249px) and (min-width:200px) {
+    .navbar {
+        width: 240%;
+    }
+}
+
+@media (max-width:900px) {
+    body {
+        background-size: cover !important;
+        /* overflow-x: hidden; */
+    }
 }
 
 #simple-modal {
@@ -103,9 +154,15 @@ h1 {
     margin-bottom: 70px;
 }
 
+.top-div h1 {
+    font-family: 'Andika New Basic', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 2%;
+}
+
 #fenInDiv {
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     top: 80%;
     left: 310px;
 }
@@ -125,7 +182,7 @@ h1 {
 
 #fenIn {
     width: 700px;
-    height: 25px;
+    height: 30px;
     border-radius: 2px;
     border: 1px solid #333;
     margin-right: 8px;
@@ -135,7 +192,7 @@ h1 {
     font-family: 'PT Sans', sans-serif;
     display: inline-block;
     width: 120px;
-    height: 30px;
+    height: 35px;
     text-align: center;
     margin-right: 20px;
     background-color: antiquewhite;
@@ -224,13 +281,14 @@ h1 {
 }
 
 #EngineOutput {
-    margin-top: 40px;
+    margin-top: 60px;
     position: absolute;
     left: 850px;
     top: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 1.2em;
 }
 
 .Square {
@@ -471,7 +529,7 @@ h1 {
     }
     #fenInDiv {
         left: 90px;
-        width: 100%;
+        /* width: 100%; */
     }
     #fenIn {
         width: 600px;
