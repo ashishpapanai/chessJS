@@ -153,12 +153,26 @@ $(document).on('click', '.Square', function(e) {
 
 });
 
+//WAD object
+let tock = new Wad({source : '../sounds/sound1.mp3'})
+let tock2 = new Wad({source : '../sounds/sound2.mp3'})
+
+//move piece
+let tickTock = async function(){
+    await tock.play()
+    await tock.stop()
+}
+//capture piece
+let tickTock2 = async function(){
+    await tock2.play()
+    await tock2.stop()
+}
+
 function MakeUserMove() {
 
     if (UserMove.from != SQUARES.NO_SQ && UserMove.to != SQUARES.NO_SQ) {
 
         console.log("User Move:" + PrSq(UserMove.from) + PrSq(UserMove.to));
-
         let parsed = ParseMove(UserMove.from, UserMove.to);
 
         if (parsed != NOMOVE) {
@@ -215,6 +229,7 @@ function MoveGUIPiece(move) {
 
     let from = FROMSQ(move);
     let to = TOSQ(move);
+    let flag= false;
 
     if (move & MFLAGEP) {
         let epRemove;
@@ -224,8 +239,13 @@ function MoveGUIPiece(move) {
             epRemove = to + 10;
         }
         RemoveGUIPiece(epRemove);
+        flag=true;
+        tickTock2();
+
     } else if (CAPTURED(move)) {
         RemoveGUIPiece(to);
+        flag=true;
+        tickTock2()
     }
 
     let file = FilesBrd[to];
@@ -259,11 +279,15 @@ function MoveGUIPiece(move) {
                 AddGUIPiece(SQUARES.D8, PIECES.bR);
                 break;
         }
+
     } else if (PROMOTED(move)) {
         RemoveGUIPiece(to);
         AddGUIPiece(to, PROMOTED(move));
+        // tickTock();
     }
-
+    if(!flag){
+        tickTock();
+    }
 }
 
 function DrawMaterial() {
