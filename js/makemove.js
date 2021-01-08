@@ -51,8 +51,8 @@ function MovePiece(from, to) {
 			GameBoard.pList[PCEINDEX(pce,index)] = to;
 			break;
 		}
-	}
-	
+    }
+    
 }
 
 function MakeMove(move) {
@@ -182,7 +182,6 @@ function TakeMove() {
     }
     
     MovePiece(to, from);
-    
     let captured = CAPTURED(move);
     if(captured != PIECES.EMPTY) {      
         AddPiece(to, captured);
@@ -192,5 +191,4 @@ function TakeMove() {
         ClearPiece(from);
         AddPiece(from, (PieceCol[PROMOTED(move)] == COLOURS.WHITE ? PIECES.wP : PIECES.bP));
     }
-    
 }

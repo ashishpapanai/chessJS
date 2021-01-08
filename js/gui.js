@@ -240,16 +240,19 @@ function MoveGUIPiece(move) {
         }
         RemoveGUIPiece(epRemove);
         flag=true;
-        // tickTock2();
+        //capture sound
         $('audio#pop')[1].play()
 
     } else if (CAPTURED(move)) {
         RemoveGUIPiece(to);
         flag=true;
-        // tickTock2()
+        //capture sound
         $('audio#pop')[1].play()
     }
-
+    //quiet move sound
+    if(!flag){
+        $('audio#pop')[0].play()
+    }
     let file = FilesBrd[to];
     let rank = RanksBrd[to];
     let rankName = "rank" + (rank + 1);
@@ -267,28 +270,29 @@ function MoveGUIPiece(move) {
             case SQUARES.G1:
                 RemoveGUIPiece(SQUARES.H1);
                 AddGUIPiece(SQUARES.F1, PIECES.wR);
+                $('audio#pop')[0].play()
                 break;
             case SQUARES.C1:
                 RemoveGUIPiece(SQUARES.A1);
                 AddGUIPiece(SQUARES.D1, PIECES.wR);
+                $('audio#pop')[0].play()
                 break;
             case SQUARES.G8:
                 RemoveGUIPiece(SQUARES.H8);
                 AddGUIPiece(SQUARES.F8, PIECES.bR);
+                $('audio#pop')[0].play()
                 break;
             case SQUARES.C8:
                 RemoveGUIPiece(SQUARES.A8);
                 AddGUIPiece(SQUARES.D8, PIECES.bR);
+                $('audio#pop')[0].play()
                 break;
         }
 
     } else if (PROMOTED(move)) {
         RemoveGUIPiece(to);
         AddGUIPiece(to, PROMOTED(move));
-        // tickTock();
-    }
-    if(!flag){
-        $('audio#pop')[0].play()
+        $('audio#pop')[2].play()
     }
 }
 
@@ -355,13 +359,16 @@ function CheckResult() {
 
     if (InCheck == BOOL.TRUE) {
         if (GameBoard.side == COLOURS.WHITE) {
+            $('audio#pop')[2].play()
             alert('GAME OVER: Black Mates');
             return BOOL.TRUE;
         } else {
+            $('audio#pop')[2].play()
             alert('GAME OVER: White Mates');
             return BOOL.TRUE;
         }
     } else {
+        $('audio#pop')[2].play()
         alert('GAME DRAWN: Stalemate');
         return BOOL.TRUE;
     }
