@@ -22,6 +22,10 @@ body {
     background-attachment: fixed;
 }
 
+.navbar li{
+    margin-right: 7%;
+}
+
 @media (max-width:500px) and (min-width:288px) {
     .navbar {
         width: 130%;
