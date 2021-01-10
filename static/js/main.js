@@ -140,8 +140,8 @@ function InitBoardSquares(x) {
 	
 }
 
-function init2(x) {
-	console.log("init2() called");
+function changetheme(x) {
+	console.log("theme changed, game restarted");
 	InitFilesRanksBrd();
 	InitHashKeys();
 	InitSq120To64();
