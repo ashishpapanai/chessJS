@@ -96,7 +96,9 @@ function InitBoardSquares() {
 	let rankIter = 0;
 	let fileIter = 0;
 	let lightString;
-	
+	var x=1;
+	x = document.getElementById("BoardTheme");
+	console.log("this is x "+x);
 	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
 		light = lastLight ^ 1;
 		lastLight ^= 1;
@@ -104,8 +106,8 @@ function InitBoardSquares() {
 		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
 			fileName = "file" + (fileIter+1);
 			
-			if(light==0) lightString="Light";
-			else lightString = "Dark";
+			if(light==0) lightString="Light"+x;
+			else lightString = "Dark"+x;
 			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
 			light^=1;
 			$("#Board").append(divString);
@@ -113,7 +115,7 @@ function InitBoardSquares() {
  	}
 }
 
-function InitBoardSquares() {
+function InitBoardSquares(x) {
 	let light = 1;
 	let rankName;
 	let fileName;
@@ -121,20 +123,32 @@ function InitBoardSquares() {
 	let rankIter;
 	let fileIter;
 	let lightString;
-	
+	//var x = document.getElementById("BoardTheme").value.onchange = init;
+	console.log("this is x "+x);
 	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
 		light ^= 1;
 		rankName = "rank" + (rankIter + 1);
 		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
 			fileName = "file" + (fileIter + 1);
-			if(light == 0) lightString="Light";
-			else lightString = "Dark";
+			if(light == 0) lightString="Light"+x;
+			else lightString = "Dark"+x;
 			light^=1;
 			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
 			$("#Board").append(divString);
 		}
 	}
 	
+}
+
+function init2(x) {
+	console.log("init2() called");
+	InitFilesRanksBrd();
+	InitHashKeys();
+	InitSq120To64();
+	InitBoardVars();
+	InitMvvLva();
+	InitBoardSquares(x);
+	NewGame(START_FEN);
 }
 
 function init() {
@@ -144,5 +158,5 @@ function init() {
 	InitSq120To64();
 	InitBoardVars();
 	InitMvvLva();
-	InitBoardSquares();
+	InitBoardSquares(1);
 }
