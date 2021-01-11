@@ -13,9 +13,11 @@ body {
     margin-bottom: 10%;
     background-attachment: fixed;
 }
-
+body p, body h2, body ul{
+    padding: 0px 50px;
+}
 .navbar {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
