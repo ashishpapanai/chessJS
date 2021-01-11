@@ -148,7 +148,14 @@ function changetheme(x) {
 	InitBoardVars();
 	InitMvvLva();
 	InitBoardSquares(x);
-	NewGame(START_FEN);
+	var sq;
+	for (sq = 0; sq < 64; ++sq) {
+        sq120 = SQ120(sq);
+        pce = GameBoard.pieces[sq120];
+        if (pce >= PIECES.wP && pce <= PIECES.bK) {
+            AddGUIPiece(sq120, pce);
+        }
+    }
 }
 
 function init() {
