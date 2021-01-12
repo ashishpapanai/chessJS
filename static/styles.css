@@ -17,7 +17,7 @@ body p, body h2, body ul{
     padding: 0px 50px;
 }
 .navbar {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -258,10 +258,6 @@ h1 {
     cursor: pointer;
 }
 
-.button-primary:hover, .button-secondary:hover, .button-tertiary:hover{
-    background-color: orange !important;
-}
-
 .button-secondary {
     font-family: 'PT Sans', sans-serif;
     display: inline-block;
@@ -291,6 +287,10 @@ h1 {
     cursor: pointer;
 }
 
+.button-primary:hover, .button-secondary:hover, .button-tertiary:hover{
+    background-color: orange !important;
+}
+
 #EngineOutput {
     margin-top: 60px;
     position: absolute;
@@ -309,14 +309,19 @@ h1 {
 }
 
 .footer {
-    padding-top: 6rem;
-    padding-bottom: 0.175rem;
+    padding-top: 4rem;
     text-align: center;
+    position: relative;
+    margin-top: 100px;
   }
   .footer .p-small {
-    padding-top: 0.175rem;
-    opacity: 0.7;
+    padding-top: 9rem;
+    opacity: 0.9;
   }
+  .footer .p-small2{
+    position: relative
+  }
+
   .footer .foot {
     color: #643969;
   }
@@ -558,7 +563,7 @@ h1 {
     #Board {
         margin-left: 100px;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         left: 700px;
     }
 }
@@ -577,7 +582,7 @@ h1 {
     #Board {
         margin-left: 30px;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         left: 620px;
     }
 }
@@ -610,7 +615,7 @@ h1 {
     #Board {
         margin-left: 10%;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         top: 750px;
         left: 10%;
     }

@@ -124,7 +124,7 @@ function InitBoardSquares(x) {
 	let fileIter;
 	let lightString;
 	//var x = document.getElementById("BoardTheme").value.onchange = init;
-	console.log("this is x "+x);
+	console.log("theme chosen = x = "+x);
 	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
 		light ^= 1;
 		rankName = "rank" + (rankIter + 1);
