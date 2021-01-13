@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+
 body {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/static/images/chess2.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* background-size: 1600px 750px; */
@@ -12,13 +13,19 @@ body {
     margin-bottom: 10%;
     background-attachment: fixed;
 }
-
+body p, body h2, body ul{
+    padding: 0px 50px;
+}
 .navbar {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.navbar li{
+    margin-right: 7%;
 }
 
 @media (max-width:500px) and (min-width:288px) {
@@ -280,6 +287,10 @@ h1 {
     cursor: pointer;
 }
 
+.button-primary:hover, .button-secondary:hover, .button-tertiary:hover{
+    background-color: orange !important;
+}
+
 #EngineOutput {
     margin-top: 60px;
     position: absolute;
@@ -297,11 +308,28 @@ h1 {
     height: 60px;
 }
 
-.Dark {
+
+.Dark1 {
     background-color: rgb(55, 124, 46);
 }
 
-.Light {
+.Light1 {
+    background-color: #ffffff;
+}
+
+.Dark2 {
+    background-color: #6F4E37;
+}
+
+.Light2 {
+    background-color: #FFEBCD;
+}
+
+.Dark3 {
+    background-color: #3D3C3A;
+}
+
+.Light3 {
     background-color: #ffffff;
 }
 
@@ -518,7 +546,7 @@ h1 {
     #Board {
         margin-left: 100px;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         left: 700px;
     }
 }
@@ -537,7 +565,7 @@ h1 {
     #Board {
         margin-left: 30px;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         left: 620px;
     }
 }
@@ -570,7 +598,7 @@ h1 {
     #Board {
         margin-left: 10%;
     }
-    #EngineOutput {
+    #EngineOutput, .footer {
         top: 750px;
         left: 10%;
     }

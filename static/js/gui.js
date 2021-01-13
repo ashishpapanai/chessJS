@@ -206,7 +206,7 @@ function AddGUIPiece(sq, pce) {
     let rank = RanksBrd[sq];
     let rankName = "rank" + (rank + 1);
     let fileName = "file" + (file + 1);
-    let pieceFileName = "images/" + SideChar[PieceCol[pce]] + PceChar[pce].toUpperCase() + ".png";
+    let pieceFileName = "/static//images/" + SideChar[PieceCol[pce]] + PceChar[pce].toUpperCase() + ".png";
     let imageString = "<image src=\"" + pieceFileName + "\" class=\"Piece " + rankName + " " + fileName + "\"/>";
     $("#Board").append(imageString);
 }
