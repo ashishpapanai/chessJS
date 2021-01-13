@@ -308,23 +308,6 @@ h1 {
     height: 60px;
 }
 
-.footer {
-    padding-top: 4rem;
-    text-align: center;
-    position: relative;
-    margin-top: 100px;
-  }
-  .footer .p-small {
-    padding-top: 9rem;
-    opacity: 0.9;
-  }
-  .footer .p-small2{
-    position: relative
-  }
-
-  .footer .foot {
-    color: #643969;
-  }
 
 .Dark1 {
     background-color: rgb(55, 124, 46);
