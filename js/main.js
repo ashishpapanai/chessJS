@@ -96,9 +96,7 @@ function InitBoardSquares() {
 	let rankIter = 0;
 	let fileIter = 0;
 	let lightString;
-	var x=1;
-	x = document.getElementById("BoardTheme");
-	console.log("this is x "+x);
+	
 	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
 		light = lastLight ^ 1;
 		lastLight ^= 1;
@@ -106,8 +104,8 @@ function InitBoardSquares() {
 		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
 			fileName = "file" + (fileIter+1);
 			
-			if(light==0) lightString="Light"+x;
-			else lightString = "Dark"+x;
+			if(light==0) lightString="Light";
+			else lightString = "Dark";
 			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
 			light^=1;
 			$("#Board").append(divString);
@@ -115,7 +113,7 @@ function InitBoardSquares() {
  	}
 }
 
-function InitBoardSquares(x) {
+function InitBoardSquares() {
 	let light = 1;
 	let rankName;
 	let fileName;
@@ -123,39 +121,20 @@ function InitBoardSquares(x) {
 	let rankIter;
 	let fileIter;
 	let lightString;
-	//var x = document.getElementById("BoardTheme").value.onchange = init;
-	console.log("theme chosen = x = "+x);
+	
 	for(rankIter = RANKS.RANK_8; rankIter >= RANKS.RANK_1; rankIter--) {
 		light ^= 1;
 		rankName = "rank" + (rankIter + 1);
 		for(fileIter = FILES.FILE_A; fileIter <= FILES.FILE_H; fileIter++) {
 			fileName = "file" + (fileIter + 1);
-			if(light == 0) lightString="Light"+x;
-			else lightString = "Dark"+x;
+			if(light == 0) lightString="Light";
+			else lightString = "Dark";
 			light^=1;
 			divString = "<div class=\"Square " + rankName + " " + fileName + " " + lightString + "\"/>";
 			$("#Board").append(divString);
 		}
 	}
 	
-}
-
-function changetheme(x) {
-	console.log("theme changed, game restarted");
-	InitFilesRanksBrd();
-	InitHashKeys();
-	InitSq120To64();
-	InitBoardVars();
-	InitMvvLva();
-	InitBoardSquares(x);
-	var sq;
-	for (sq = 0; sq < 64; ++sq) {
-        sq120 = SQ120(sq);
-        pce = GameBoard.pieces[sq120];
-        if (pce >= PIECES.wP && pce <= PIECES.bK) {
-            AddGUIPiece(sq120, pce);
-        }
-    }
 }
 
 function init() {
@@ -165,5 +144,5 @@ function init() {
 	InitSq120To64();
 	InitBoardVars();
 	InitMvvLva();
-	InitBoardSquares(1);
+	InitBoardSquares();
 }

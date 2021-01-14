@@ -1,5 +1,4 @@
 # chessJS: A GOFAI Chess Engine (2300+ ELO Rated*)
-
 ## **ChessJS: How to contribute to this repository**
 
 To contribute to this repository, follow the following steps:
@@ -14,30 +13,6 @@ To contribute to this repository, follow the following steps:
 _All we need is your contributions and patience._
 
 #
-
-## Dependencies
-
-* Chess Engine is written in JavaScript.
-* Front-end is implemented using HTML, CSS, and JavaScript
-* The code is rendered using Flask(a python library)
-  * app.py file contains the paths to the HTML pages
-* Code Structure:
-  * app.py
-  * static
-    * images
-    * js files
-    * css files
-  * templates
-    * html files
-* To make modifications common to *all *pages, make changes in the *"template.html"* file
-* To make changes in some specific page, edit *"page_name.html"* file
-
-### Steps to Run the Application
-
-1. Install Python:
-2. Install flask library using command: *pip install flask*
-3. Run Application using command: *flask run*
-
 ## **Chess JS**
 
 Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching in a tree, Min-Max is a Good Old Fashion Artificial Intelligence (GOFAI) algorithm. The algorithm is a naïve algorithm and for its optimization Alpha-beta pruning is incorporated.
