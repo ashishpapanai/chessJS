@@ -1,0 +1,67 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Andika New Basic', sans-serif;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess2.jpg');
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    /* background-size: 1600px 750px; */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10%;
+    background-attachment: fixed;
+}
+.navbar li a{
+    color: white !important;
+    transition: all ease-in-out 0.6s;
+}
+.navbar li a:hover{
+    color: rgb(228, 218, 218) !important;
+    transform: scale(1.2);
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    
+    -webkit-background-clip: text;
+   
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+a:visited {
+    color: crimson;
+}
+
+#heading-primary{
+    color:white;
+    padding: 40px 0;
+}
+#subheading{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.content{
+    width:90%;
+    margin:30px auto;
+    padding:30px;
+    background-color: white;
+    color: black;
+}
+.content h4{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.content img{
+    width:200px;
+    height:200px;
+    padding-bottom:20px;
+}
+
+
+
+

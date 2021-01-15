@@ -1,14 +1,31 @@
 body {
-    background-color: #d3d3d3;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Andika New Basic', sans-serif;
+    color: white;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess2.jpg');
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    /* background-size: 1600px 750px; */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10%;
+    background-attachment: fixed;
 }
-
+.navbar li a{
+    color: white !important;
+    transition: all ease-in-out 0.6s;
+}
+.navbar li a:hover{
+    color: rgb(228, 218, 218) !important;
+    transform: scale(1.2);
+}
 h1 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to right, black, white);
+    
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   
 }
 
 p {
@@ -20,35 +37,56 @@ a {
     color: steelblue;
 }
 
-a:visited {
-    color: crimson;
-}
 
 #container {
     max-width: 1100px;
     margin: auto
 }
+#heading-primary{
+    color:white;
+    padding: 40px 0;
+}
 
+.content{
+    width:90%;
+    margin:auto;
+}
 #heading-secondary {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
-    margin-top: 50px;
+    margin: 50px 0;
+    text-align:center;
+    position:relative; 
 }
-
+.content p a{
+    color:rgb(206, 131, 131);
+}
+#heading-secondary:before{
+    content:'';
+    position:absolute;
+    bottom:-6px;
+    width:160px;
+    height: 5px;
+    background: rgb(206, 131, 131);
+}
 #credits-div {
     margin-top: 20px;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content:center;
+    flex-wrap: wrap;
+    width: 90%;
     margin-bottom: 50px;
+    margin:auto;
 }
 
 .credit-card {
-    width: 300px;
+    width:25%;
     height: 350px;
     border: 1px solid #eee;
     box-shadow: 2px 1px 5px #333;
+    margin:0 20px;
 }
+
 
 .credit-card-image {
     width: 100%;
@@ -57,26 +95,10 @@ a:visited {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin: 20px 0 10px 0;
 }
 
-.image-credit-1 {
-    display: block;
-    width: 50%;
-    height: 90%;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.image-credit-2 {
-    display: block;
-    width: 50%;
-    height: 90%;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.image-credit-3 {
+.image-credit{
     display: block;
     width: 50%;
     height: 90%;
@@ -86,10 +108,11 @@ a:visited {
 
 #heading-tertiary {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: center;
     color: rgb(51, 51, 51);
     margin-bottom: 30px;
+    margin-top:10px;
 }
 
 #credit-card-content-links {
@@ -97,6 +120,9 @@ a:visited {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+#credit-card-content-links a{
+    padding: 0 10px;
 }
 
 #credit-card-content-para {
@@ -107,18 +133,6 @@ a:visited {
 .social-link:visited {
     color: black;
     margin: 10px;
-}
-
-#seperator {
-    width: 2px;
-    height: 350px;
-    background-color: #333;
-}
-
-#credits-type {
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
 }
 
 #heading-type-1-div {
@@ -133,77 +147,22 @@ a:visited {
     margin-left: 60px;
 }
 
-.vertical {
-    display: none;
-}
-
-@media(max-width: 1000px) {
+@media (max-width: 500px){
+    
     .credit-card {
-        width: 230px;
-    }
-}
-
-@media(max-width: 800px) {
-    #credits-div {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
         width: 100%;
-        margin-bottom: 50px;
-    }
-    #seperator {
-        display: none;
-        width: 90%;
-        height: 2px;
-        margin-top: 20px;
-    }
-    .credit-card {
-        width: 90%;
-        height: 120px;
-        display: flex;
-        margin-right: auto;
-        margin-top: 20px;
-        border-radius: 5px;
-    }
-    .credit-card-image {
-        width: 40%;
-        height: 100%;
-    }
-    .image-credit-1 {
-        margin-left: 20px;
-        width: 60%;
-    }
-    .image-credit-2 {
-        margin-left: 20px;
-        width: 60%;
-    }
-    .image-credit-3 {
-        margin-left: 20px;
-        width: 60%;
-    }
-    .credit-card-content {
-        width: 60%;
-        display: flex;
-        position: relative;
-    }
-    #credits-type {
-        display: none;
-    }
-    .vertical {
-        display: block;
-        margin-top: 50px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.7rem;
-        text-align: center;
-        color: #333;
         margin-bottom: 30px;
     }
-    #heading-tertiary {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.2rem;
-        text-align: center;
-        color: #333;
-        margin-top: 30px;
-        width: 50%;
+}
+@media (min-width: 500px){
+    .credit-card {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 800px){
+    .credit-card {
+        width: 25%;
+        margin-bottom: 30px;
     }
 }

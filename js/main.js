@@ -4,6 +4,15 @@ $(function() {
 	NewGame(START_FEN);
 });
 
+function changebackground(){
+	if(document.getElementById('changebg').style.backgroundImage == 'url("images/chess2.jpg")')
+	{
+		document.getElementById('changebg').style.backgroundImage = 'url("images/chess1.jpg")';
+	}
+	else{
+		document.getElementById('changebg').style.backgroundImage = 'url("images/chess2.jpg")';
+	}
+}
 function InitFilesRanksBrd() {
 	
 	let index = 0;
@@ -145,4 +154,5 @@ function init() {
 	InitBoardVars();
 	InitMvvLva();
 	InitBoardSquares();
+	changebackground();
 }

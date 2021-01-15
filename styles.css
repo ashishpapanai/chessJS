@@ -3,7 +3,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess2.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* background-size: 1600px 750px; */
@@ -13,14 +13,21 @@ body {
     background-attachment: fixed;
 }
 
-.navbar {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.navbar li a{
+    color: white !important;
+    transition: all ease-in-out 0.6s;
+}
+.navbar li a:hover{
+    color: rgb(228, 218, 218) !important;
+    transform: scale(1.2);
 }
 
+input[type="submit"]{
+    background-color: grey;
+    margin-left: 5px;
+    padding: 5px;
+    color: white;
+}
 @media (max-width:500px) and (min-width:288px) {
     .navbar {
         width: 130%;
