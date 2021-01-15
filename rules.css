@@ -18,6 +18,16 @@ body {
     color: rgb(228, 218, 218) !important;
     transform: scale(1.2);
 }
+
+input[type="submit"]{
+    background-color: grey;
+    margin-left: 5px;
+    padding: 5px;
+    color: white;
+}
+input[type="submit"]:active{
+    background-color: rgb(59, 76, 87);
+}
 h1 {
     text-align: center;
     font-size: 3rem;

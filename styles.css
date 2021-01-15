@@ -28,6 +28,10 @@ input[type="submit"]{
     padding: 5px;
     color: white;
 }
+input[type="submit"]:active{
+    background-color: rgb(59, 76, 87);
+}
+
 @media (max-width:500px) and (min-width:288px) {
     .navbar {
         width: 130%;

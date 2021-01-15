@@ -154,5 +154,4 @@ function init() {
 	InitBoardVars();
 	InitMvvLva();
 	InitBoardSquares();
-	changebackground();
 }

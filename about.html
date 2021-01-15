@@ -22,7 +22,7 @@
 
 </head>
 
-<body>
+<body id="changebg">
     <!-- <form method="get" action="./Daily Progress Report.docx">
         <button type="submit">Download!</button>
     </form> -->
@@ -44,6 +44,9 @@
                     <li class="nav-item">
                         <a class="nav-link" target="blank" href="https://github.com/ashishpapanai/chessJS">Code</a>
                     </li>
+                    
+                    <input type="submit" onclick="changebackground()" value="Change Background">
+                    
                 </ul>
             </div>
         </div>
@@ -118,6 +121,17 @@
 
     </div>
     
+    <script>
+        function changebackground(){
+            if(document.getElementById('changebg').style.backgroundImage == 'url("images/chess2.jpg")')
+            {
+                document.getElementById('changebg').style.backgroundImage = 'url("images/chess1.jpg")';
+            }
+            else{
+                document.getElementById('changebg').style.backgroundImage = 'url("images/chess2.jpg")';
+            }
+        }
+    </script>
 </body>
 
 </html>
