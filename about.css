@@ -2,7 +2,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess5.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* background-size: 1600px 750px; */
