@@ -66,8 +66,16 @@ a:visited {
     text-align: center;
     padding-bottom: 20px;
 }
-.content img .special-img{
-    width:200px;
-    height:200px;
+.content .special-img{
+    background-image: url("images/kingmovement2.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:400px;
     padding-bottom:20px;
 }
+@media (max-width: 450px){
+    .content .special-img{
+        height:250px;
+    }
+}
+
