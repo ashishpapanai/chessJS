@@ -1,0 +1,20 @@
+[Event "Casual Correspondence game"]
+[Site "https://lichess.org/zIw5qudi"]
+[Date "2020.11.06"]
+[White "ashishpapanai"]
+[Black "lichess AI level 8"]
+[Result "0-1"]
+[UTCDate "2020.11.06"]
+[UTCTime "06:39:54"]
+[WhiteElo "1500"]
+[BlackElo "?"]
+[Variant "Standard"]
+[TimeControl "-"]
+[ECO "C45"]
+[Opening "Scotch Game: Schmidt Variation"]
+[Termination "Normal"]
+[Annotator "lichess.org"]
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 { C45 Scotch Game: Schmidt Variation } 5. Nc3 Bb4 6. Bg5 h6 7. Nxc6 bxc6 8. Bd2 O-O 9. Bd3 d5 10. f3 Bc5 11. Rc1 Re8 12. Kf1 dxe4 13. Nxe4 Nxe4 14. Bxe4 Rxe4 15. fxe4 Bg4 16. Qxg4 Qxd2 17. Qg3 Qxc1+ 18. Qe1 Qf4+ 19. Ke2 Rd8 20. b3 Qe3+ 21. Kf1 Rd1 22. Qxd1 Qf2# { Black wins by checkmate. } 0-1
+
+

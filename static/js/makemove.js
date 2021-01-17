@@ -139,7 +139,7 @@ function MakeMove(move) {
          TakeMove();
     	return BOOL.FALSE;
     }
-    
+    //console.log(from, to)
     return BOOL.TRUE;
 }
 

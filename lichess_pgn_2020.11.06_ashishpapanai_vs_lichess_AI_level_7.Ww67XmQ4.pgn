@@ -1,0 +1,19 @@
+[Event "Casual Correspondence game"]
+[Site "https://lichess.org/Ww67XmQ4"]
+[Date "2020.11.06"]
+[White "ashishpapanai"]
+[Black "lichess AI level 7"]
+[Result "0-1"]
+[UTCDate "2020.11.06"]
+[UTCTime "06:53:05"]
+[WhiteElo "1500"]
+[BlackElo "?"]
+[Variant "Standard"]
+[TimeControl "-"]
+[ECO "B01"]
+[Opening "Scandinavian Defense: Blackburne-Kloosterboer Gambit"]
+[Termination "Normal"]
+
+1. e4 d5 2. exd5 c6 3. dxc6 e6 4. cxb7 Bxb7 5. Nf3 Be7 6. Bb5+ Nc6 7. d4 Qa5+ 8. Nc3 Nf6 9. Ne5 Bb4 10. Qd3 Rc8 11. Qc4 O-O 12. Nxc6 Bxc6 13. Bxc6 Rfd8 14. a3 Bxc3+ 15. bxc3 Qb6 16. Bd2 Ne4 17. Rd1 Nxd2 18. Rxd2 Rxc6 19. Qb4 Qc7 20. Rd3 Rb8 21. Qa4 Rc4 22. Qa6 Rc6 23. Qa4 Rc4 24. Qa6 Rb6 25. Qxc4 Qxc4 26. Kd2 Qd5 27. Rg1 Rb2 28. h3 Qg5+ 29. Re3 Qf5 30. Rc1 Qxf2+ 31. Re2 Qf4+ 32. Re3 Qf5 33. Re5 Qf4+ 34. Re3 Qg5 35. c4 Qa5+ 36. Ke2 Qa4 37. Rc3 Qa5 38. Re3 Qa4 39. Rc3 h6 40. Kd3 Qa6 41. Rd1 Qd6 42. Ke2 Qf4 43. Rd2 Rb1 44. Rf3 Qe4+ 45. Re3 Qxg2+ 46. Kd3 Qg6+ 47. Kc3 Qg5 48. Re5 Qg1 49. a4 Ra1 50. Ree2 Qc1 51. Kd3 Qf1 52. Ke4 Re1 53. Rxe1 f5+ 54. Ke3 f4+ 55. Ke4 Qxe1+ 56. Kxf4 Qxd2+ 57. Ke5 Qe3+ 58. Kd6 Qxd4+ 59. Kxe6 Qxc4+ 60. Ke5 Qxa4 61. c3 Qc4 62. Kf5 a5 63. h4 Kf7 64. h5 Qd3+ 65. Kf4 Qxc3 66. Kg4 a4 67. Kh4 a3 68. Kg4 Kf6 69. Kh4 Qb3 70. Kg4 Qe3 71. Kh4 Qb3 72. Kg4 Qc3 73. Kh4 a2 74. Kg4 Qd3 75. Kh4 a1=Q 76. Kg4 Qa4# 0-1
+
+

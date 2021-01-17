@@ -11,6 +11,17 @@ $('#TakeButton').click(function() {
     }
 });
 
+$('#ResignButton').click(function(){
+    if(GameBoard.side === COLOURS.WHITE) {
+        alert('White Resigns, Black Wins.');
+        return BOOL.TRUE;
+
+    }else{
+        alert('Black Resigns, White Wins.');
+        return BOOL.TRUE;
+    }
+});
+
 var UserMove = {};
 UserMove.from = SQUARES.NO_SQ;
 UserMove.to = SQUARES.NO_SQ;
@@ -156,6 +167,7 @@ function MakeUserMove() {
             MoveGUIPiece(parsed);
             CheckAndSet();
             PreSearch();
+            console.log(UserMove.from+" "+UserMove.to);
         }
 
         DeSelectSq(UserMove.from);
@@ -194,7 +206,7 @@ function AddGUIPiece(sq, pce) {
     let rank = RanksBrd[sq];
     let rankName = "rank" + (rank + 1);
     let fileName = "file" + (file + 1);
-    let pieceFileName = "images/" + SideChar[PieceCol[pce]] + PceChar[pce].toUpperCase() + ".png";
+    let pieceFileName = "/static//images/" + SideChar[PieceCol[pce]] + PceChar[pce].toUpperCase() + ".png";
     let imageString = "<image src=\"" + pieceFileName + "\" class=\"Piece " + rankName + " " + fileName + "\"/>";
     $("#Board").append(imageString);
 }

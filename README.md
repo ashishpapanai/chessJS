@@ -1,4 +1,5 @@
-# chessJS: A GOFAI Chess Engine
+# chessJS: A GOFAI Chess Engine (2300+ ELO Rated*)
+
 ## **ChessJS: How to contribute to this repository**
 
 To contribute to this repository, follow the following steps:
@@ -13,6 +14,30 @@ To contribute to this repository, follow the following steps:
 _All we need is your contributions and patience._
 
 #
+
+## Dependencies
+
+* Chess Engine is written in JavaScript.
+* Front-end is implemented using HTML, CSS, and JavaScript
+* The code is rendered using Flask(a python library)
+  * app.py file contains the paths to the HTML pages
+* Code Structure:
+  * app.py
+  * static
+    * images
+    * js files
+    * css files
+  * templates
+    * html files
+* To make modifications common to *all *pages, make changes in the *"template.html"* file
+* To make changes in some specific page, edit *"page_name.html"* file
+
+### Steps to Run the Application
+
+1. Install Python:
+2. Install flask library using command: *pip install flask*
+3. Run Application using command: *flask run*
+
 ## **Chess JS**
 
 Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching in a tree, Min-Max is a Good Old Fashion Artificial Intelligence (GOFAI) algorithm. The algorithm is a naïve algorithm and for its optimization Alpha-beta pruning is incorporated.
@@ -27,7 +52,7 @@ Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching 
 
 All rules and regulations of [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/), are applicable to use this repository.
 
-_FIDE prohibits use any engines or electronic device during any live or online rated/professional event, The owner holds no responsibility towards any such malpractices and strictly prohibits the use of this for educational and training purposes._
+_FIDE prohibits use any engines or electronic device during any live or online rated/professional event, The owner holds no responsibility towards any such malpractices and restrains the use for only educational and training purposes._
 
 **For TL;DR conditions:**
 
@@ -44,6 +69,8 @@ Special Thanks to [Anshuman Pandey](https://github.com/anshuman9999/) for being 
 Special Thanks to [Piyush Gupta](https://github.com/gupta-piyush19) for adding additional features to the website and providing valuable inputs in styling of this project.
 
 This project wouldn&#39;t have been possible without referring additional websites and research papers from IBM DeepBlue, Deep Mind and Stockfish, Every details about the referred websites is smentioned in the references section.
+
+### *The Elo rating mentioned is an approximation based on a series of match conducted with varied difficulties of [Stockfish](https://stockfishchess.org/) conducted at [Lichess](https://lichess.org/).
 
 **References and Citations:**
 
