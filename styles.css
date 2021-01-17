@@ -13,12 +13,23 @@ body {
     background-attachment: fixed;
 }
 
-.navbar {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.navbar li a{
+    color: white !important;
+    transition: all ease-in-out 0.6s;
+}
+.navbar li a:hover{
+    color: rgb(228, 218, 218) !important;
+    transform: scale(1.2);
+}
+
+input[type="submit"]{
+    background-color: grey;
+    margin-left: 5px;
+    padding: 5px;
+    color: white;
+}
+input[type="submit"]:active{
+    background-color: rgb(59, 76, 87);
 }
 
 @media (max-width:500px) and (min-width:288px) {

@@ -3,14 +3,18 @@
 <html prefix="og: https://ogp.me/ns#">
 
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Chess Analysis and Games">
-    <meta name="keywords" content="Chess Js About Us, Chess Js Ashish, Ashish Chessjs, Ashish Papanai, ChessJs, Chess AI, Chess Tutorial">
+    <meta name="keywords" content="Chess Js, Chess Js, Chessjs, Ashish Papanai, ChessJS, ChessJs, Chess AI, Chess Tutorial">
     <meta name="author" content="Ashish Papanai">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Play live chess with an intellignet computer for free and analyse your exisitng chess game positions with FEN Notations. Solve interesting chess puzzles and know the best possible move. No adwares No Bloatwares. Learn Chess for free at your convenience. ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./about.css">
     <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
     <meta property="og:image" content="https://images.unsplash.com/photo-1567874790230-3acbb5149829?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
@@ -18,22 +22,51 @@
 
 </head>
 
-<body>
+<body id="changebg">
     <!-- <form method="get" action="./Daily Progress Report.docx">
         <button type="submit">Download!</button>
     </form> -->
-
+    <nav class="navbar navbar-expand-lg navbar-dark shadow ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/favicon.ico" width="30" height="30">Chess JS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="blank" href="https://github.com/ashishpapanai/chessJS">Code</a>
+                    </li>
+                    
+                    <input type="submit" onclick="changebackground()" value="Change Background">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
     <div id="container">
         <h1 id="heading-primary">Chess JS</h1>
+        <div class="content">
+            <p>Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching in a tree, Min-Max is a Good Old Fashion Artificial Intelligence (GOFAI) algorithm. The algorithm is a naïve algorithm and for its optimization Alpha-beta pruning
+                is incorporated.</p>
 
-        <p>Chess JS is a chess engine written in JavaScript. It works on Min-Max Searching in a tree, Min-Max is a Good Old Fashion Artificial Intelligence (GOFAI) algorithm. The algorithm is a naïve algorithm and for its optimization Alpha-beta pruning
-            is incorporated.</p>
+            <p><span style="font-weight: 700;">Alpha-Beta pruning</span>: This algorithm focuses in reducing the nodes visited in the depth-first search implementation used in the Min-Max Algorithm. Thus, without travelling the entire tree we make basic mathematical
+                conclusions on the tree.</p>
 
-        <p><span style="font-weight: 700;">Alpha-Beta pruning</span>: This algorithm focuses in reducing the nodes visited in the depth-first search implementation used in the Min-Max Algorithm. Thus, without travelling the entire tree we make basic mathematical
-            conclusions on the tree.</p>
-
-        <p><span style="font-weight: 700;">Rules of Chess</span>: The Engine follows all rules of Chess specified by FIDE ( Fédération Internationale des Echecs : International Chess Federation), rules can be referred <a target="blank" href="https://www.fide.com/FIDE/handbook/LawsOfChess.pdf">here</a>.</p>
-
+            <p><span style="font-weight: 700;">Rules of Chess</span>: The Engine follows all rules of Chess specified by FIDE ( Fédération Internationale des Echecs : International Chess Federation)</p>
+        </div>
         <!-- <p>
             <span style="font-weight: 700;" >Terms of Use</span>: <br><br>
 
@@ -43,23 +76,11 @@
         </p> -->
 
         <h2 id="heading-secondary"> Developers </h2>
-        <h3 class="heading-type-1 vertical">JavaScript AI</h3>
 
-        <div id="credits-type">
-            <div id="heading-type-1-div">
-                <h3 class="heading-type-1">JavaScript AI</h3>
-            </div>
-
-            <div id="heading-type-2-div">
-                <h3 class="heading-type-2">HTML/CSS Frontend</h3>
-            </div>
-
-        </div>
-
-        <div id=credits-div>
-            <div class="credit-card card-1 ">
+        <div id="credits-div">
+            <div class="card credit-card">
                 <div class="credit-card-image">
-                    <img class="image-credit-1" src="./images/assissPhotoo.jpeg" alt="">
+                    <img class="image-credit" src="./images/assissPhotoo.jpeg" alt="">
                 </div>
                 <div class="credit-card-content">
                     <h3 id="heading-tertiary">Ashish Papanai</h3>
@@ -71,13 +92,9 @@
                     </div>
                 </div>
             </div>
-            <div id="seperator"></div>
-            <div class="vertical-heading">
-                <h3 class="heading-type-1 vertical">HTML/CSS Frontend</h3>
-            </div>
-            <div class="credit-card card-2 ">
+            <div class="card credit-card">
                 <div class="credit-card-image">
-                    <img class="image-credit-2" src="https://avatars2.githubusercontent.com/u/54475686?s=460&u=6a30eac7d0b1ce9429ffccbff7eeb135c23ad88f&v=4" alt="">
+                    <img class="image-credit" src="https://avatars2.githubusercontent.com/u/54475686?s=460&u=6a30eac7d0b1ce9429ffccbff7eeb135c23ad88f&v=4" alt="">
                 </div>
                 <div class="credit-card-content">
                     <h3 id="heading-tertiary" class="heading-tertiary-v">Anshuman Pandey</h3>
@@ -89,9 +106,9 @@
                     </div>
                 </div>
             </div>
-            <div class="credit-card card-3 ">
+            <div class="card credit-card">
                 <div class="credit-card-image">
-                    <img class="image-credit-3" src="./images/vauPhotoo.jpeg" alt="">
+                    <img class="image-credit" src="./images/vauPhotoo.jpeg" alt="">
                 </div>
                 <div class="credit-card-content">
                     <h3 id="heading-tertiary" class="heading-tertiary-v">Piyush Gupta</h3>
@@ -106,7 +123,22 @@
         </div>
 
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script>
+        function changebackground(){
+            if(document.getElementById('changebg').style.backgroundImage == 'url("images/chess2.jpg")')
+            {
+                document.getElementById('changebg').style.backgroundImage = 'url("images/chess1.jpg")';
+            }
+            else{
+                document.getElementById('changebg').style.backgroundImage = 'url("images/chess2.jpg")';
+            }
+        }
+    </script>
 </body>
 
 </html>

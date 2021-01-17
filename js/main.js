@@ -4,6 +4,24 @@ $(function() {
 	NewGame(START_FEN);
 });
 
+function changebackground(){
+	
+	if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess1.jpg")')
+  { 
+    document.getElementById("changebg").style.backgroundImage = 'url("images/chess2.jpg")';
+ 
+  }
+  else if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess2.jpg")')
+  { 
+    document.getElementById("changebg").style.backgroundImage = 'url("images/chess3.jpg")';
+ 
+  }
+  else
+  {
+    document.getElementById("changebg").style.backgroundImage = 'url("images/chess1.jpg")';
+  }
+	  
+}
 function InitFilesRanksBrd() {
 	
 	let index = 0;
