@@ -1,9 +1,66 @@
-{% extends "template.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<html prefix="og: https://ogp.me/ns#">
+    <head>                    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Chess JS: A JavaScript Chess AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Chess Js, Chess Js, Chessjs, Ashish Papanai, ChessJS, ChessJs, Chess AI, Chess Tutorial">
+    <meta name="author" content="Ashish Papanai">
+    <meta name="description" content="Play live chess with an intellignet computer for free and analyse your exisitng chess game positions with FEN Notations. Solve interesting chess puzzles and know the best possible move. No adwares No Bloatwares. Learn Chess for free at your convenience. ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="keywords" content="Chess, Chess Engine, Chess Engine in JavaScript, Code Chess Engine">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-{% block body%}
-    <!-- <form method="get" action="./Daily Progress Report.docx">
-        <button type="submit">Download!</button>
-    </form> -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <!--<link href="styles.css" rel="stylesheet" type="text/css">-->
+
+    <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico') }}" type="image/ico" sizes="16x16">
+    <!-- <link rel="stylesheet" media="(max-width:900px)" type="text/css" href="secondary.css"> -->
+    <!-- <link rel="stylesheet" media="(max-width:680px)" type="text/css" href="tertiary.css"> -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1567874790230-3acbb5149829?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+    <script type="text/javascript">
+        if (!window.console) console = {
+            log: function() {}
+        };
+    </script>
+    
+    {% block heading %}
+    {% endblock %}
+    </head>
+    {% block body%}
+    <body>
+            
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow ">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for('static',filename='images/favicon.ico') }}" width="30" height="30">Chess JS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">Home
+                          <span class="sr-only">(current)</span>
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('help') }}">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="blank" href="https://github.com/ashishpapanai/chessJS">Code</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     <div id="container">
         <h1 id="heading-primary">Chess JS</h1>
