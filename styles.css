@@ -3,7 +3,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-family: 'Andika New Basic', sans-serif;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess1.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/chess2.jpg');
     background-repeat: no-repeat;
     overflow-x: hidden;
     /* background-size: 1600px 750px; */
@@ -13,22 +13,104 @@ body {
     background-attachment: fixed;
 }
 
-.navbar li a{
-    color: white !important;
-    transition: all ease-in-out 0.6s;
+#board-color-options {
+    display: flex;
+    margin-bottom: 10px;
 }
-.navbar li a:hover{
-    color: rgb(228, 218, 218) !important;
+
+.board-color-1, .board-color-2, .board-color-3 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.board-color-1:hover, .board-color-2:hover, .board-color-3:hover {
+    cursor: pointer;
+}
+
+.board-color-1::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+}
+
+.board-color-1:hover::before, .board-color-2:hover::before, .board-color-3:hover::before {
     transform: scale(1.2);
 }
 
-input[type="submit"]{
+.board-color-2::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+}
+
+.board-color-3::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+}
+
+.board-color-1 {
+    background-color: #eee;
+}
+
+.board-color-1::before {
+    background-color: #254117;
+}
+
+.board-color-2 {
+    background-color: #FFEBCD;
+}
+
+.board-color-2::before {
+    background-color: #6F4E37;
+}
+
+.board-color-3 {
+    background-color: #eee;
+}
+
+.board-color-3::before {
+    background-color: #3D3C3A;
+}
+
+.navbar li a {
+    color: #fafafa;
+    margin-right: 10px;
+}
+
+.navbar li a:hover {
+    color: white !important;
+    transform: scale(1.2);
+}
+
+input[type="submit"] {
     background-color: grey;
     margin-left: 5px;
     padding: 5px;
     color: white;
 }
-input[type="submit"]:active{
+
+input[type="submit"]:active {
     background-color: rgb(59, 76, 87);
 }
 
@@ -300,6 +382,30 @@ h1 {
     flex-direction: column;
     justify-content: center;
     line-height: 1.2em;
+}
+
+#ThinkTimeChoice {
+    margin-bottom: 40px;
+}
+
+#engine-ouput-spans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+@-moz-document url-prefix() {
+    #engine-ouput-spans {
+        margin-bottom: 0;
+    }
+    .output-spans {
+        margin-bottom: 20px;
+    }
+
+    .button-container-3 {
+        margin-bottom: 50px;
+    }
 }
 
 .Square {
@@ -574,6 +680,7 @@ h1 {
     }
     #fenInDiv {
         left: 150px;
+        top: 60px;
     }
     #fenIn {
         width: 400px;

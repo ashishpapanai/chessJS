@@ -4,24 +4,24 @@ $(function() {
 	NewGame(START_FEN);
 });
 
-function changebackground(){
+// function changebackground(){
 	
-	if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess1.jpg")')
-  { 
-    document.getElementById("changebg").style.backgroundImage = 'url("images/chess2.jpg")';
+// 	if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess1.jpg")')
+//   { 
+//     document.getElementById("changebg").style.backgroundImage = 'url("images/chess2.jpg")';
  
-  }
-  else if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess2.jpg")')
-  { 
-    document.getElementById("changebg").style.backgroundImage = 'url("images/chess3.jpg")';
+//   }
+//   else if (document.getElementById("changebg").style.backgroundImage == 'url("images/chess2.jpg")')
+//   { 
+//     document.getElementById("changebg").style.backgroundImage = 'url("images/chess3.jpg")';
  
-  }
-  else
-  {
-    document.getElementById("changebg").style.backgroundImage = 'url("images/chess1.jpg")';
-  }
+//   }
+//   else
+//   {
+//     document.getElementById("changebg").style.backgroundImage = 'url("images/chess1.jpg")';
+//   }
 	  
-}
+// }
 function InitFilesRanksBrd() {
 	
 	let index = 0;
@@ -163,4 +163,59 @@ function init() {
 	InitBoardVars();
 	InitMvvLva();
 	InitBoardSquares();
+
+	const color1 = document.querySelector('.board-color-1');
+	color1.addEventListener('click', () => {
+		const lightNodeList = document.querySelectorAll('.Light')
+		const darkNodeList = document.querySelectorAll('.Dark')
+
+		const lightArray = Array.from(lightNodeList)
+		const darkArray = Array.from(darkNodeList)
+
+		lightArray.forEach(le => {
+			le.style.backgroundColor = '#eee'
+		})
+
+		darkArray.forEach(de => {
+			de.style.backgroundColor = '#254117'
+		})
+
+	})
+
+	const color2 = document.querySelector('.board-color-2');
+	color2.addEventListener('click', () => {
+		const lightNodeList = document.querySelectorAll('.Light')
+		const darkNodeList = document.querySelectorAll('.Dark')
+
+		const lightArray = Array.from(lightNodeList)
+		const darkArray = Array.from(darkNodeList)
+
+		lightArray.forEach(le => {
+			le.style.backgroundColor = '#FFEBCD'
+		})
+
+		darkArray.forEach(de => {
+			de.style.backgroundColor = '#6F4E37'
+		})
+
+	})
+
+	const color3 = document.querySelector('.board-color-3');
+	color3.addEventListener('click', () => {
+		const lightNodeList = document.querySelectorAll('.Light')
+		const darkNodeList = document.querySelectorAll('.Dark')
+
+		const lightArray = Array.from(lightNodeList)
+		const darkArray = Array.from(darkNodeList)
+
+		lightArray.forEach(le => {
+			le.style.backgroundColor = '#eee'
+		})
+
+		darkArray.forEach(de => {
+			de.style.backgroundColor = '#3D3C3A'
+		})
+
+	})
+
 }
