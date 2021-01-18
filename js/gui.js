@@ -37,6 +37,7 @@ function MIRROR120(sq) {
 
 
 $('#NewGameButton').click(function() {
+    clearEngineOutput();
     NewGame(START_FEN);
 });
 
@@ -357,6 +358,15 @@ function PreSearch() {
         SearchController.thinking = BOOL.TRUE;
         setTimeout(function() { StartSearch(); }, 200);
     }
+}
+
+function clearEngineOutput() {
+	$("#OrderingOut").text("Ordering: ");
+	$("#DepthOut").text("Depth: ");
+	$("#ScoreOut").text("Score");
+	$("#NodesOut").text("Nodes: ");
+	$("#TimeOut").text("Time: ");
+	$("#BestOut").text("BestMove: ");
 }
 
 $('#SearchButton').click(function() {
