@@ -15,15 +15,17 @@
     <meta name="keywords" content="Chess, Chess Engine, Chess Engine in JavaScript, Code Chess Engine">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
-    <!--<link href="styles.css" rel="stylesheet" type="text/css">-->
-
     <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico') }}" type="image/ico" sizes="16x16">
     <!-- <link rel="stylesheet" media="(max-width:900px)" type="text/css" href="secondary.css"> -->
     <!-- <link rel="stylesheet" media="(max-width:680px)" type="text/css" href="tertiary.css"> -->
     <meta property="og:image" content="https://images.unsplash.com/photo-1567874790230-3acbb5149829?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+    <!-- script to maintain active status of nav items -->
     <script type="text/javascript">
+    $(function () {
+        $("#page1 a:contains('Home')").parent().addClass('active');
+        $("#page2 a:contains('About')").parent().addClass('active');
+        $("#page3 a:contains('Help')").parent().addClass('active');
+     });
         if (!window.console) console = {
             log: function() {}
         };
@@ -36,13 +38,13 @@
             
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow ">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static',filename='images/favicon.ico') }}" width="30" height="30">Chess JS</a>
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for('static',filename='images/favicon.ico') }}" width="30" height="30">Chess JS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('index') }}">Home
                           <span class="sr-only">(current)</span>
                         </a>

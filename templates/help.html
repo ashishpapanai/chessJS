@@ -1,10 +1,15 @@
 {% extends "template.html" %}
 
+{% block heading %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <!--<link href="styles.css" rel="stylesheet" type="text/css">-->
+{% endblock %}
+
 {% block body%}
     <!-- <form method="get" action="./Daily Progress Report.docx">
         <button type="submit">Download!</button>
     </form> -->
-
+<body id="page3">
     <div id="container">
         <h1 id="heading-primary">Chess JS</h1>
 
@@ -37,4 +42,5 @@
        </ul>
 
     </div>
+</body>    
 {% endblock %}

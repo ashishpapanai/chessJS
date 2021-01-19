@@ -1,9 +1,13 @@
 {% extends "template.html" %}
 
+{% block heading %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <!--<link href="styles.css" rel="stylesheet" type="text/css">-->
+{% endblock %}
+
 {% block body%}
-            
-    
-    <div id="main">
+<body id="page1">       
+     <div id="main">
         <div id="simple-modal" class="modal">
             <div class="modal-content">
                 <div class="closeBtn-div">
@@ -100,7 +104,7 @@
     <script src="{{url_for('static', filename='js/gui.js')}}"></script>
     <script src="{{url_for('static', filename='js/main.js')}}"></script>
     <script src="{{url_for('static', filename='js/modal.js')}}"></script>
-
+</body>
     {% endblock %}
 
 <style>
