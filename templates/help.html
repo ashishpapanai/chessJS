@@ -1,5 +1,10 @@
 {% extends "template.html" %}
 
+{% block heading %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <!--<link href="styles.css" rel="stylesheet" type="text/css">-->
+{% endblock %}
+
 {% block body%}
     <!-- <form method="get" action="./Daily Progress Report.docx">
         <button type="submit">Download!</button>
