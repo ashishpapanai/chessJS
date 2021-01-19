@@ -23,7 +23,13 @@
     <!-- <link rel="stylesheet" media="(max-width:900px)" type="text/css" href="secondary.css"> -->
     <!-- <link rel="stylesheet" media="(max-width:680px)" type="text/css" href="tertiary.css"> -->
     <meta property="og:image" content="https://images.unsplash.com/photo-1567874790230-3acbb5149829?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+    <!-- script to maintain active status of nav items -->
     <script type="text/javascript">
+    $(function () {
+        $("#page1 a:contains('Home')").parent().addClass('active');
+        $("#page2 a:contains('About')").parent().addClass('active');
+        $("#page3 a:contains('Help')").parent().addClass('active');
+     });
         if (!window.console) console = {
             log: function() {}
         };
