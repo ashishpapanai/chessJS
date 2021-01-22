@@ -373,6 +373,30 @@ h1 {
     cursor: pointer;
 }
 
+.button-primary:focus {
+    outline: none;
+}
+
+.button-secondary:focus {
+    outline: none;
+}
+
+.button-tertiary:focus{
+    outline: none;
+}
+
+.button-primary:hover{
+    background: #020650;
+}
+
+.button-secondary:hover{
+    background: #033e5c;
+}
+
+.button-tertiary:hover{
+    background: rgb(122, 10, 10);
+}
+
 #EngineOutput {
     margin-top: 60px;
     position: absolute;
