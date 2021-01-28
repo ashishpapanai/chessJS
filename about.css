@@ -175,4 +175,9 @@ a {
         width: 25%;
         margin-bottom: 30px;
     }
+ @media(max-width:1000px) {
+    .navbar li a:hover {
+        transform: none;
+    }
+}   
 }
