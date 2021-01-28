@@ -73,6 +73,11 @@ a:visited {
     height:400px;
     padding-bottom:20px;
 }
+@media(max-width:1000px) {
+    .navbar li a:hover {
+        transform: none;
+    }
+}
 @media (max-width: 450px){
     .content .special-img{
         height:250px;
