@@ -12,12 +12,10 @@ body {
     background-attachment: fixed;
 }
 
-
 .navbar li a{
-    color: #eee;
-    transition: all ease 0.1s;
+   color: #eee;
+   margin-right: 10px;
 }
-
 .navbar li a:hover{
     color: white !important;
     transform: scale(1.2);
@@ -35,7 +33,6 @@ h1 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Roboto', sans-serif;
-    
     -webkit-background-clip: text;
     background-clip: text;
    
@@ -178,4 +175,9 @@ a {
         width: 25%;
         margin-bottom: 30px;
     }
+ @media(max-width:1000px) {
+    .navbar li a:hover {
+        transform: none;
+    }
+}   
 }

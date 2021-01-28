@@ -681,6 +681,9 @@ h1 {
     #EngineOutput {
         left: 620px;
     }
+    .navbar li a:hover {
+        transform: none;
+    }
 }
 
 @media(max-width: 900px) {

@@ -11,10 +11,9 @@ body {
     background-attachment: fixed;
 }
 .navbar li a{
-    color: #eee;
-    transition: all ease 0.1s;
+ color: #eee;
+ margin-right: 10px;
 }
-
 .navbar li a:hover{
     color: white !important;
     transform: scale(1.2);
@@ -73,6 +72,11 @@ a:visited {
     background-repeat: no-repeat;
     height:400px;
     padding-bottom:20px;
+}
+@media(max-width:1000px) {
+    .navbar li a:hover {
+        transform: none;
+    }
 }
 @media (max-width: 450px){
     .content .special-img{
