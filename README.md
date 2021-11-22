@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/308050020.svg)](https://zenodo.org/badge/latestdoi/308050020)
 # chessJS: A GOFAI Chess Engine (2300+ ELO Rated*)
 ## **ChessJS: How to contribute to this repository**
 
